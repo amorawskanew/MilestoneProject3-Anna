@@ -1,8 +1,9 @@
-import os
-from flask import Flask, render_template, redirect, request, url_for
+iimport os
+from flask import Flask,flash, render_template, redirect, request,session, url_for
 from flask_pymongo import PyMongo
-'''from pymongo import MongoClient
-#from bson.objectid import ObjectId
+from pymongo import MongoClient
+from bson.objectid import ObjectId
+'''
 #from dotenv import load_dotenv
 #load_dotenv('.env')
 #from flask_share import Share
@@ -14,12 +15,23 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+#Configuration to grab the database name
+app.config["MONGO_DBNAME"] = os.environ.get("CoctailCollections")
 
+#Configuration for connection string
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+
+# To grab the secret key
+app.secret_key = os.environ.get("SECRET_KEY")
+
+#Constructer method
+mongo = PyMongo(app)
+
+'''
 @app.route("/")
 def hello():
     return "Hello World ... again!"
 
-'''
 # Environment variables to store DB password
 app.config["MONGO_DBNAME"] = 'Coctails'
 app.config["MONGO_URI"] = os.getenv('DATABASE_URL')
@@ -30,18 +42,19 @@ mongo = PyMongo(app)
 # for sharing on socials on view song page
 share.init_app(app)
 
-# routes to home page where all the coctails are displayed
+'''
+# Route to home page where all the coctails are displayed
 @app.route('/')
 def home():
     return render_template('home.html')
     
     
-# routes to fruit coctails
-@app.route('/get_fruit_coctails')
-def get_country():
-    return render_template('fruit_coctails.html', 
-                           # sorts songs in genre by artist name
-                           songs=mongo.db.songs.find({"genre_name":"Country"}).sort("artist_name"))
+# routes to classic coctails
+@app.route('/get_classic_coctails')
+def get_classic_coctails():
+    return render_template('classicscoctails.html', 
+                           # sort coctails in categories by coctail name
+                           coctail=mongo.db.coctail.find({"category_name":"Classics"}).sort("primary_alcohol"))
     
     
 # routes to classic coctails

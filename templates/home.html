@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+{% extends 'base.html' %} 
+{% block content %}
+<!-- header -->
+<h2 >
+Coctails for you!
+</h2>
+<!-- sub header/headline -->
+<h4>
+Classics!
+</h4>
+<!-- Description of website -->
+<div>
+		<p>Do you like coctails</p>
+</div>
+<!-- Start image rows - materialize grid system -->
+<!-- row 1-->
+<div class="row">
+  <!-- col 1 -->
+    <div class="col l3 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+         <a href="{{url_for('get_classics')}}"><img src="/static/images/clasics.png" alt="Classics"></a>
+        </div>
+      </div>
+    </div>
+  <!-- col 2 -->
+     <div class="col l3 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+           <a href="{{url_for('get_country')}}"><img src="/static/images/Country.png" alt="Country"></a>
+        </div>
+      </div>
+    </div>
+  <!-- col 3 -->
+    <div class="col l3 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+          <a href="{{url_for('get_folk')}}"><img src="/static/images/Folk.png" alt="Folk"></a>
+        </div>
+      </div>
+    </div>
+  <!-- col 4 -->
+    <div class="col l3 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+          <a href="{{url_for('get_pop')}}"><img src="/static/images/Pop.png" alt="Pop"></a>
+        </div>
+      </div>
+    </div>   
+</div> 
+<!-- row 2 -->
+<div class="row">
+  <!-- col 1 -->
+    <div class="col l3 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+          <a href="{{url_for('get_rock')}}"><img src="/static/images/Rock.png" alt="Rock"></a>
+        </div>
+      </div>
+    </div>
+  <!-- col 2 -->
+     <div class="col l3 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+          <a href="{{url_for('get_reggae')}}"><img src="/static/images/Reggae.png"  alt="Reggae"></a>
+        </div>
+      </div>
+    </div>
+  <!-- col 3 -->
+    <div class="col l3 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+          <a href="{{url_for('get_urban')}}"><img src="/static/images/Urban.png" alt="Urban"></a>
+        </div>
+      </div>
+    </div>
+  <!-- col 4 -->
+    <div class="col l3 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+          <a href="{{url_for('get_other')}}"><img src="/static/images/Other.png" alt="Other"></a>
+        </div>
+      </div>
+    </div>   
+</div>
+{% endblock %}

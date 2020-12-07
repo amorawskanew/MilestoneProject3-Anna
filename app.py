@@ -12,7 +12,8 @@ if os.path.exists("env.py"):
 app = Flask(__name__)
 
 #Configuration to grab the database name
-app.config["MONGO_DBNAME"] = os.environ.get("CoctailCollections")
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+
 
 #Configuration for connection string
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
@@ -35,7 +36,14 @@ mongo = PyMongo(app)
 def home():
     return render_template('home.html')
     
-    
+
+ # Routes to  "coctails by categories"   
+@app.route('/get_coctail_by_category/<category>')
+def get_coctail_by_category(category):
+    return render_template('coctails_by_category.html',
+     coctails=mongo.db.coctails.find({"category_name":category}).sort("coctail_name"))     
+
+
 # Routes to category "Classics"
 @app.route('/get_classics')
 def get_classics():

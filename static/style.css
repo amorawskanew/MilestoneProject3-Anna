@@ -1,3 +1,8 @@
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
 @import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
 
 body {
@@ -18,7 +23,7 @@ main {
 
 /* Nav Bar - changed background colour*/
 .nav-wrapper {
-  background-color: black;
+  background-color: green;
   text-transform: uppercase;
 }
 

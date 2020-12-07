@@ -26,9 +26,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/")
-def hello():
-    return "Hello World ... again!"
+
 
 
 
@@ -103,8 +101,8 @@ def get_non_alcoholic_coctails():
            
               
 # routes page to all coctails in my DB   
-@app.route('/get_coctails')
-def get_coctails():
+@app.route('/get_coctail')
+def get_coctail():
     return render_template('allcoctails.html', 
                            # sorts list to last inserted doc to help users find it easily.
                            coctails=mongo.db.coctails.find().sort("_id", -1))
@@ -114,8 +112,8 @@ def get_coctails():
 @app.route('/add_coctail')
 def add_coctail():
     return render_template('addcoctail.html',
-                           coctail=mongo.db.songs.find(),
-                           genres=mongo.db.genre.find())   
+                           coctail=mongo.db.coctails.find(),
+                           categories=mongo.db.category.find())   
 
 
 if __name__ == '__main__':

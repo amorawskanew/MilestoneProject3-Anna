@@ -15,30 +15,223 @@
 {% extends 'base.html' %} 
 {% block content %}
 <!-- header -->
-<h2 >
-Coctails for you!
+<h2 class="center" >
+Coctail Collections
 </h2>
 <!-- sub header/headline -->
-<h4>
-Classics!
-</h4>
+<h6 class="center" >
+Discover the world of coctails! 
+</h6>
 <!-- Description of website -->
-<div>
-		<p>Do you like coctails?</p>
+<div class="center">
+		<p>If you like throwing parties, Coctail Collections is a place for you! 
+        You can find here all kinds of recipies from classical to modern era shakes.
+        Choose the one you like and make it for your friends!
+        If you know some special coctail recipie you can also share it here.
+        </p>
 </div>
+
+
+Copy last
+<!-- row 1 -->
+    <div class="row">
+        <!-- col 1 -->
+        <div class="col l4 m4 s12">
+            <div class="card sticky-action">
+                <div class="card-image">
+                <img src="/static/images/classics.jpg" class="materialboxed" >
+         <!--  <span class="card-title">Card Title</span> -->
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                </div>
+                <div class="card-content">
+                <p>I am a very simple card. </p>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title"> Classic coctails <i class="right"></i></span>
+                </div>
+                <div class="card-action">
+                 <a href="{{url_for('get_classics')}}">This is a link</a>
+                </div>
+            </div>
+        </div>
+        <!-- col 2 -->
+        
+        <div class="col l4 m4 s12">
+            <div class="card sticky-action">
+                <div class="card-image">
+                <img src="/static/images/new_era.jpg" class="materialboxed">
+                <span class="card-title">Card Title</span>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                </div>
+                <div class="card-content">
+                <p>I am a very simple card. </p>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title"> sweet coctails <i class="right"></i></span>
+                </div>
+                <div class="card-action">
+                <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+        <!-- col 3 -->
+        <div class="col l4 m4 s12">
+            <div class="card sticky-action">
+                <div class="card-image">
+                <img src="/static/images/specials.jpg" class="materialboxed">
+                <span class="card-title">Card Title</span>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                </div>
+                <div class="card-content">
+                <p>I am a very simple card. </p>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title"> sweet coctails <i class="right"></i></span>
+                </div>
+                <div class="card-action">
+                <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+
+    </div>    
+<!-- row 2-->
+    <div class="row">
+    <!-- col 1 -->
+        <div class="col l4 m4 s12">
+            <div class="card sticky-action">
+                <div class="card-image">
+                <img src="/static/images/beer.jpg" class="materialboxed">
+                <span class="card-title">Card Title</span>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                </div>
+                <div class="card-content">
+                <p>I am a very simple card. </p>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title"> sweet coctails <i class="right"></i></span>
+                </div>
+                <div class="card-action">
+                <a href="{{url_for('get_non_alcoholic_coctails')}}">This is a link</a>
+                </div>
+            </div>
+        </div>
+        <!-- col 2 -->
+        <div class="col l4 m4 s12">
+            <div class="card sticky-action">
+                <div class="card-image">
+                <img src="/static/images/vodka.jpg" class="materialboxed">
+                <span class="card-title">Card Title</span>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                </div>
+                <div class="card-content">
+                <p>I am a very simple card. </p>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title"> sweet coctails <i class="right"></i></span>
+                </div>
+                <div class="card-action">
+                <a href="{{url_for('get_non_alcoholic_coctails')}}">This is a link</a>
+                </div>
+            </div>
+        </div>
+        <!-- col 3 -->
+        <div class="col l4 m4 s12">
+            <div class="card sticky-action">
+                <div class="card-image">
+                <img src="/static/images/wine.jpg" class="materialboxed">
+                <span class="card-title">Card Title</span>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                </div>
+                <div class="card-content">
+                <p>I am a very simple card. </p>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title"> sweet coctails <i class="right"></i></span>
+                </div>
+                <div class="card-action">
+                <a href="{{url_for('get_non_alcoholic_coctails')}}">This is a link</a>
+                </div>
+            </div>
+        </div>
+    
+    </div> 
+
+    <!-- row 3-->
+    <div class="row">
+    <!-- col 1 -->
+        <div class="col l4 m4 s12">
+            <div class="card sticky-action">
+                <div class="card-image">
+                <img src="/static/images/flames.jpg" class="materialboxed">
+                <span class="card-title">Card Title</span>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                </div>
+                <div class="card-content">
+                <p>I am a very simple card. </p>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title"> sweet coctails <i class="right"></i></span>
+                </div>
+                <div class="card-action">
+                <a href="{{url_for('get_non_alcoholic_coctails')}}">This is a link</a>
+                </div>
+            </div>
+        </div>
+        <!-- col 2 -->
+        <div class="col l4 m4 s12">
+            <div class="card sticky-action">
+                <div class="card-image">
+                <img src="/static/images/non_alcoholic.jpg" class="materialboxed">
+                <span class="card-title">Card Title</span>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                </div>
+                <div class="card-content">
+                <p>I am a very simple card. </p>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title"> sweet coctails <i class="right"></i></span>
+                </div>
+                <div class="card-action">
+                <a href="{{url_for('get_non_alcoholic_coctails')}}">This is a link</a>
+                </div>
+            </div>
+        </div>
+        <!-- col 3 -->
+        <div class="col l4 m4 s12">
+            <div class="card sticky-action">
+                <div class="card-image">
+                <img src="/static/images/other.jpg" class="materialboxed">
+                <span class="card-title">Card Title</span>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                </div>
+                <div class="card-content">
+                <p>I am a very simple card. </p>
+                </div>
+                <div class="card-reveal">
+                <span class="card-title"> sweet coctails <i class="right"></i></span>
+                </div>
+                <div class="card-action">
+                <a href="{{url_for('get_non_alcoholic_coctails')}}">This is a link</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+=========================
 <!-- Start image rows - materialize grid system -->
 <!-- row 1-->
 <div class="row">
   <!-- col 1 -->
-    <div class="col l3 m6 s12">
+    <div class="col l4 m6 s12 ">
       <div class="card">
         <div class="card-image hover">
-         <a href="{{url_for('get_classics')}}"><img src="/static/images/clasics.jpg" alt="Classics"></a>
+         <a href="{{url_for('get_classics')}}"><img src="/static/images/classics.jpg" alt="Classics"></a>
         </div>
       </div>
     </div>
   <!-- col 2 -->
-     <div class="col l3 m6 s12">
+     <div class="col l4 m6 s12">
       <div class="card">
         <div class="card-image hover">
            <a href="{{url_for('get_new_era_drinks')}}"><img src="/static/images/new_era.jpg" alt="New_Era"></a>
@@ -46,26 +239,19 @@ Classics!
       </div>
     </div>
   <!-- col 3 -->
-    <div class="col l3 m6 s12">
+    <div class="col l4 m6 s12">
       <div class="card">
         <div class="card-image hover">
           <a href="{{url_for('get_specials')}}"><img src="/static/images/specials.jpg" alt="Specials"></a>
         </div>
       </div>
-    </div>
-  <!-- col 4 -->
-    <div class="col l3 m6 s12">
-      <div class="card">
-        <div class="card-image hover">
-          <a href="{{url_for('get_flaming_coctails')}}"><img src="/static/images/flames.jpg" alt="Flaming Coctails"></a>
-        </div>
-      </div>
-    </div>   
+    </div>  
 </div> 
+
 <!-- row 2 -->
 <div class="row">
   <!-- col 1 -->
-    <div class="col l3 m6 s12">
+    <div class="col l4 m6 s12">
       <div class="card">
         <div class="card-image hover">
           <a href="{{url_for('get_beer_coctails')}}"><img src="/static/images/beer.jpg" alt="Beer"></a>
@@ -73,23 +259,43 @@ Classics!
       </div>
     </div>
   <!-- col 2 -->
-     <div class="col l3 m6 s12">
+     <div class="col l4 m6 s12">
       <div class="card">
         <div class="card-image hover">
-          <a href="{{url_for('get_liquor_coctails(')}}"><img src="/static/images/liquor.jpg"  alt="Liquor"></a>
+          <a href="{{url_for('get_liquor_coctails')}}"><img src="/static/images/vodka.jpg"  alt="Liquor"></a>
         </div>
       </div>
     </div>
   <!-- col 3 -->
-    <div class="col l3 m6 s12">
+    <div class="col l4 m6 s12">
       <div class="card">
         <div class="card-image hover">
           <a href="{{url_for('get_wine_coctails')}}"><img src="/static/images/wine.jpg" alt="Wine"></a>
         </div>
       </div>
     </div>
-  <!-- col 4 -->
-    <div class="col l3 m6 s12">
+</div>
+
+<!-- row 3 -->
+<div class="row">
+   <div class="col l4 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+          <a href="{{url_for('get_flaming_coctails')}}"><img src="/static/images/flames.jpg" alt="Flaming Coctails"></a>
+        </div>
+      </div>
+    </div>  
+
+    <div class="col l4 m6 s12">
+      <div class="card">
+        <div class="card-image hover">
+          <a href="{{url_for('get_non_alcoholic_coctails')}}"><img src="/static/images/non_alcoholic.jpg" alt="non_alcoholic"></a>
+        </div>
+      </div>
+    </div>  
+
+    <!-- col 3 -->
+    <div class="col l4 m6 s12">
       <div class="card">
         <div class="card-image hover">
           <a href="{{url_for('get_non_alcoholic_coctails')}}"><img src="/static/images/non_alcoholic.jpg" alt="non_alcoholic"></a>
@@ -97,4 +303,67 @@ Classics!
       </div>
     </div>   
 </div>
+
+
+Copy 2
+
+<div class="card-deck">
+<div class="row">
+
+    <div class="col l4 m4 s12">
+    <div class="card">
+        <div class="card-image hover">
+            <a href="{{url_for('get_non_alcoholic_coctails')}}"><img src="/static/images/non_alcoholic.jpg" alt="non_alcoholic"></a>
+            </div>
+        <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+    </div>
+
+   <div class="col l4 m4 s12">
+    <div class="card">
+        <div class="card-image hover">
+            <a href="{{url_for('get_non_alcoholic_coctails')}}"><img src="/static/images/non_alcoholic.jpg" alt="non_alcoholic"></a>
+            </div>
+        <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+    </div>
+
+    <div class="col l4 m4 s12">
+    <div class="card">
+        <div class="card-image hover">
+            <a href="{{url_for('get_non_alcoholic_coctails')}}"><img src="/static/images/non_alcoholic.jpg" alt="non_alcoholic"></a>
+            </div>
+        <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+    </div>
+    </div>
+    
+</div>
+</div>
+
+
+===================
+
+
+            
+
+
+
 {% endblock %}

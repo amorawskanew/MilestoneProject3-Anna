@@ -9,8 +9,8 @@
 
 /* Nav Bar - changed background colour*/
 .nav-wrapper {
-  background-color:;
-  text-transform: uppercase;
+  background-color:yellow;
+  text-transform: lowercase;
 }
 
 
@@ -29,6 +29,3 @@
   color: #ca3691;
 }
 
-.footer_link:active:focus {
-  color: #f7e4fc;
-}

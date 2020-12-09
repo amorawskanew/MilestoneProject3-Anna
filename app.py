@@ -52,12 +52,63 @@ def get_coctail():
                            coctails=mongo.db.coctails.find().sort("_id", -1))
 
 
+
+
 # page to add a new coctail
-@app.route('/add_coctail')
+@app.route('/add_coctail', methods=["GET", "POST"])
 def add_coctail():
-    return render_template('addcoctail.html',
-                           coctail=mongo.db.coctails.find(),
-                           categories=mongo.db.category.find())   
+ 
+    if request.method == "POST":
+      
+        coctail_description = {
+            "category_name": request.form.get("category_name"),
+            "coctail_name": request.form.get("coctail_name"),
+            "type": request.form.get("type"),
+            "primary_alcohol": request.form.get("primary_alcohol"),
+            "served": request.form.get("served"),
+            "drinkware": request.form.get("drinkware"),
+            "ingredients": request.form.get("ingredients"),
+            "preparation": request.form.get("preparations"),
+        }
+        mongo.db.coctails.insert_one(coctail)
+        flash("Task Successfully Added")
+        return redirect(url_for("get_coctails"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("addcoctail.html", categories=categories)
+
+ # Edit/update new coctail
+    
+
+@app.route("/edit_coctail/<coctail_id>", methods=["GET", "POST"])
+def edit_coctail(coctail_id):
+    if request.method == "POST":
+        
+        submit = {
+            
+            "category_name": request.form.get("category_name"),
+            "coctail_name": request.form.get("coctail_name"),
+            "type": request.form.get("type"),
+            "primary_alcohol": request.form.get("primary_alcohol"),
+            "served": request.form.get("served"),
+            "drinkware": request.form.get("drinkware"),
+            "ingredients": request.form.get("ingredients"),
+            "preparation": request.form.get("preparations"),
+        }
+        mongo.db.coctails.update({"_id": ObjectId(coctail_id)}, submit)
+        flash("Task Successfully Updated")
+
+    coctail = mongo.db.coctails.find_one({"_id": ObjectId(coctail_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_coctail.html", coctail=coctail, categories=categories)
+
+ # Removew coctail
+@app.route("/delete_coctail/<coctail_id>")
+def delete_coctail(coctail_id):
+    mongo.db.coctails.remove({"_id": ObjectId(coctail_id)})
+    flash("Task Successfully Deleted")
+    return redirect(url_for("get_coctails"))
+
 
 
 if __name__ == '__main__':

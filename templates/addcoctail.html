@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="light-blue-text text-darken-4 center-align">All Coctails</h3>
+
+    <div class="row card-panel grey lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('add_coctail') }}">
+            <!-- category selection -->
+			<div class="row">
+				<div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+					<select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose Coctail Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+					<label for="category_name">Coctail Category</label>
+				</div>
+			</div>
+            <!-- Coctail name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="coctail_name" name="coctail_name" minlength="1" maxlength="200"
+                        type="text" class="validate" required>
+                    <label for="coctail_name">Coctail Name</label>
+                </div>
+            </div>
+            <!-- Coctail type -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="type" name="type" minlength="1" maxlength="200"
+                        type="text" class="validate" required>
+                    <label for="type">Coctail Type</label>
+                </div>
+            </div>
+            <!-- Coctail primary alcohol-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="primary_alcohol" name="primary_alcohol" minlength="1" maxlength="200"
+                        type="text" class="validate" required>
+                    <label for="primary_alcohol">Primary alcohol</label>
+                </div>
+            </div>    
+            <!-- Coctail way of serving -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="served" name="served" minlength="1" maxlength="200"
+                        type="text" class="validate" required>
+                    <label for="served">Served</label>
+                </div>
+            </div>    
+            <!-- Coctail drinkware -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="drinkware" name="drinkware" minlength="1" maxlength="200"
+                        type="text" class="validate" required>
+                    <label for="drinkware">Drinkware</label>
+                </div>
+            </div>    
+            <!-- Coctail ingredients (description)-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <textarea id="ingredients" name="ingredients" minlength="5"
+                        maxlength="5000" class="materialize-textarea validate" required></textarea>
+                    <label for="ingredients">Ingredients</label>
+                </div>
+            </div>
+            <!-- Coctail preparation (description)-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <textarea id="preparation" name="preparation" minlength="5"
+                        maxlength="5000" class="materialize-textarea validate" required></textarea>
+                    <label for="preparation">Preparation</label>
+                </div>
+            </div>
+            <!--Notes-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="notes" name="notes" minlength="1" maxlength="1100"
+                        type="text" class="validate" required>
+                    <label for="notes">Notes</label>
+                </div>
+            </div>    
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                        Add Coctail <i class="fas fa-plus-square right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
+
+

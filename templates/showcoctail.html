@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block content %}
+<!-- Title -->
+
+ <!-- Card info Section--> 
+<div class="col l3 m6 s12">
+    <div class="card horizontal">
+    <!-- Coktail Image -->
+        <div class="card-image">
+            <img src="{{coctail.image_link}}" alt="URL Image" class="image-size-show hide-on-small-only">
+        </div>
+    <div class="card-stacked">
+        <!-- Cocktail card content -->
+        <div class="card-content">
+            <ul>
+                <li>
+                    <!-- Cocktail name -->
+                    <span class="coctail-name">
+                        {{coctail.coctail_name}} 
+                    </span>
+                </li>
+                <li>
+                    <!-- Cocktail type -->
+                    <span class="type-name">
+                        {{coctail.type}} 
+                    </span>
+                </li>
+                <li>
+                    <!-- primary alcohol-->
+                    <span class="alcohol-name">
+                        {{coctail.primary_alcohol}} 
+                    </span>
+                </li> 
+               
+                
+            </ul>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+{% endblock %}

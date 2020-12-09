@@ -40,8 +40,9 @@ def home():
  # Routes to  "coctails by categories"   
 @app.route('/get_coctail_by_category/<category>')
 def get_coctail_by_category(category):
+    category_name = category
     return render_template('coctails_by_category.html',
-     coctails=mongo.db.coctails.find({"category_name":category}).sort("coctail_name"))     
+     coctails=list(mongo.db.coctails.find({"category_name":category}).sort("coctail_name")), category_name=category_name)
        
        
 # routes page to all coctails in my DB   
@@ -87,6 +88,7 @@ def edit_coctail(coctail_id):
         submit = {
             
             "category_name": request.form.get("category_name"),
+            "image_link": request.form.get("image_link"),
             "coctail_name": request.form.get("coctail_name"),
             "type": request.form.get("type"),
             "primary_alcohol": request.form.get("primary_alcohol"),
@@ -101,6 +103,23 @@ def edit_coctail(coctail_id):
     coctail = mongo.db.coctails.find_one({"_id": ObjectId(coctail_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_coctail.html", coctail=coctail, categories=categories)
+
+    # routes page to all cocktails in database    
+@app.route('/get_coctails')
+def get_coctails():
+    return render_template('coctails.html', 
+                           # sort list to last inserted doc so users can find their song in list easily
+                           coctail=mongo.db.coctails.find().sort("_id", -1))
+                           
+                           
+# routes to view cocktail information
+@app.route("/show_coctail/<coctail_id>")
+def show_coctail(coctail_id):
+        the_coctail = mongo.db.coctails.find_one({"_id": ObjectId(coctail_id)})
+        all_categories = mongo.db.category.find()
+        return render_template('showcoctail.html', coctail=the_coctail, categories=all_categories)
+    
+
 
  # Removew coctail
 @app.route("/delete_coctail/<coctail_id>")

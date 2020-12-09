@@ -1,0 +1,44 @@
+
+{% extends 'base.html' %} {% block content %}
+<!-- Title-->
+<div class="s12 m3 l3">
+    <h3 class="h-style">All Cocktails</h3>
+<!-- Start of Cocktail Card-->
+<div class="row">
+<!--Calling on cocktail collection-->
+{% for coctail in coctails %} 
+    <!--Cocktail image-->
+    <div class="col l4 m6 s12">
+        <div class="card large">
+            <div class="card-image">
+                    <img class="image-size" src="{{coctail.image_link}}" alt="URL Image">
+                    <span class="card-title">{{coctail.category_name}}</span>
+            </div>
+            <!--Cocktail info-->
+            <div class="card-content">
+                <ul>
+                    <li>
+                        <!--Coktail name-->
+                        <span class="vartist-name">
+                            {{coctail.coctail_name}} 
+                        </span>
+                    </li>
+                    <li>
+                        <!--Cocktail name-->
+                        <span class="truncate vcoctail-name">
+                            {{coctail.coctail_name}} 
+                        </span>
+                    </li>
+                    <li>
+                    <span>
+                    <!--Button to view  cocktail recipie-->
+                    <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class='btn view_button'>View Cocktail</a>
+                        </span>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

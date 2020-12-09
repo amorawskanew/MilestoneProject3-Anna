@@ -1,5 +1,13 @@
+
 {% extends 'base.html'%} {% block content %}
 <!-- Title -->
+
+<div class="col s12">
+  <h3 class="h-style center">{{coctails.category_name}}</h3>
+</div>
+
+
+<h3 class="h-style center" >Classics...</h3>
 
   <!-- Start of Coctail Card -->
  <div class="row">
@@ -13,15 +21,15 @@
         <div class="card large">
             <div class="card-image">
                     <img class="image-size" src="{{coctail.image_link}}" alt="URL Image">
-                    <span class="card-title">{{coctail.category_name}}</span>
+                    <span class="card-title" >{{coctail.category_name}}</span>
             </div>
             <!--Coctail content-->
             <div class="card-content">
                 <ul>
                     <li>
                         <!--Coctail name-->
-                        <span>
-                            {{coctail.coctail_name}} 
+                        <span >
+                           <h5 class= "h-style">{{coctail.coctail_name}}</h5>  
                         </span>
                     </li>
                     <li>

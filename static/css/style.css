@@ -1,39 +1,61 @@
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-
 @import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
 
 
-
-/* Nav Bar - changed background colour*/
-.nav-wrapper {
+/* Nav Bar */
+.text-color {
   background-color:;
   text-transform: uppercase;
+  color: #EC6632 ;
+  text-decoration: none;
 }
 
-.button:hover {
-  background-color: black;
+.text-color:hover {
+  background-color:;
+  text-transform: uppercase;
+  color: #CD4813;
   text-decoration: none;
-  transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -webkit-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
 }
+
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 
 
 /* Footer */
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
 .page-footer {
-  background-color: green ;
+  background-color:  ;
   margin-top: 2em;
 }
 
 .footer_link {
-  color: #e785a6de;
+  color: #EC6632 ;
+  text-decoration: none;
 }
 
 .footer_link:hover {
-  color: #ca3691;
+  color: #CD4813;
+  text-decoration: none;
 }
 
+/* Remove the Underline from All Hyperlinks */
+a:visited {
+  text-decoration: none;
+}
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }

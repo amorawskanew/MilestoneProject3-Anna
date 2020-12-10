@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, flash,redirect
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
@@ -37,7 +37,7 @@ def home():
     return render_template('home.html')
 
 
- # Routes to  "coctails by categories"   
+ # Routes to  "cocktails by categories"   
 @app.route('/get_coctail_by_category/<category>')
 def get_coctail_by_category(category):
     category_name = category
@@ -45,7 +45,7 @@ def get_coctail_by_category(category):
      coctails=list(mongo.db.coctails.find({"category_name":category}).sort("coctail_name")), category_name=category_name)
        
        
-# routes page to all coctails in my DB   
+# routes page to all cocktails in my DB   
 @app.route('/get_coctail')
 def get_coctail():
     return render_template('allcoctails.html', 
@@ -55,13 +55,13 @@ def get_coctail():
 
 
 
-# page to add a new coctail
+# page to add a new cocktail
 @app.route('/add_coctail', methods=["GET", "POST"])
 def add_coctail():
  
     if request.method == "POST":
       
-        coctail_description = {
+        coctail= {
             "category_name": request.form.get("category_name"),
             "coctail_name": request.form.get("coctail_name"),
             "type": request.form.get("type"),
@@ -71,16 +71,27 @@ def add_coctail():
             "ingredients": request.form.get("ingredients"),
             "preparation": request.form.get("preparations"),
         }
+
+        
+
         mongo.db.coctails.insert_one(coctail)
         flash("Task Successfully Added")
         return redirect(url_for("get_coctails"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("addcoctail.html", categories=categories)
+    return render_template("addcoctail.html",  categories=categories)
 
- # Edit/update new coctail
+
+# inserts new cocktail
+@app.route('/insert_coctail', methods=['GET', 'POST'])
+def insert_coctail():
+    coctails =  mongo.db.coctails
+    coctails.insert_one(request.form.to_dict())
+    return redirect(url_for('get_coctails'))    
+
+
+ # Edit/update new cocktail
     
-
 @app.route("/edit_coctail/<coctail_id>", methods=["GET", "POST"])
 def edit_coctail(coctail_id):
     if request.method == "POST":
@@ -104,13 +115,15 @@ def edit_coctail(coctail_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_coctail.html", coctail=coctail, categories=categories)
 
+
     # routes page to all cocktails in database    
 @app.route('/get_coctails')
 def get_coctails():
     return render_template('coctails.html', 
                            # sort list to last inserted doc so users can find their song in list easily
                            coctail=mongo.db.coctails.find().sort("_id", -1))
-                           
+
+
                            
 # routes to view cocktail information
 @app.route("/show_coctail/<coctail_id>")
@@ -121,12 +134,19 @@ def show_coctail(coctail_id):
     
 
 
- # Removew coctail
+ # Removew cocktail
 @app.route("/delete_coctail/<coctail_id>")
 def delete_coctail(coctail_id):
     mongo.db.coctails.remove({"_id": ObjectId(coctail_id)})
     flash("Task Successfully Deleted")
     return redirect(url_for("get_coctails"))
+
+
+ # Route to page that displays top cocktail bartenders.
+@app.route('/stars')
+def stars():
+    return render_template('stars.html')
+                          
 
 
 

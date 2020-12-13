@@ -3,14 +3,14 @@
 
 /* Nav Bar */
 .text-color {
-  background-color:;
+
   text-transform: uppercase;
   color: #EC6632 ;
   text-decoration: none;
 }
 
 .text-color:hover {
-  background-color:;
+ 
   text-transform: uppercase;
   color: #CD4813;
   text-decoration: none;
@@ -19,6 +19,47 @@
 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* make images in card same size on all cocktails and category page*/
+
+img.image-size {
+  float: left;
+  width: 100px;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+/* make images on showsong page same size */
+img.image-size-show {
+  float: left;
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+}
+
+/* showcoctail.html page styling */
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.category-name{
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  color: #EC6632;
+}
+
+.coctail-name {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+  font-style: italic;
+}
 
 
 /* Footer */

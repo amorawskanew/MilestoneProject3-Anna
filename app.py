@@ -76,7 +76,7 @@ def add_coctail():
 
         mongo.db.coctails.insert_one(coctail)
         flash("Task Successfully Added")
-        return redirect(url_for("get_coctails"))
+        return redirect(url_for("get_coctail"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("addcoctail.html",  categories=categories)
@@ -116,13 +116,7 @@ def edit_coctail(coctail_id):
     return render_template("edit_coctail.html", coctail=coctail, categories=categories)
 
 
-    # routes page to all cocktails in database    
-@app.route('/get_coctails')
-def get_coctails():
-    return render_template('coctails.html', 
-                           # sort list to last inserted doc so users can find their song in list easily
-                           coctail=mongo.db.coctails.find().sort("_id", -1))
-
+ 
 
                            
 # routes to view cocktail information
@@ -135,11 +129,11 @@ def show_coctail(coctail_id):
 
 
  # Removew cocktail
-@app.route("/delete_coctail/<coctail_id>")
+@app.route("/delete_coctail/<coctail_id>", methods=["GET", "POST"])
 def delete_coctail(coctail_id):
     mongo.db.coctails.remove({"_id": ObjectId(coctail_id)})
     flash("Task Successfully Deleted")
-    return redirect(url_for("get_coctails"))
+    return redirect(url_for("get_coctail"))
 
 
  # Route to page that displays top cocktail bartenders.

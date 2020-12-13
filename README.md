@@ -1,45 +1,95 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+1.PROJECT'S NAME: Cocktail Collections
 
-Welcome amorawskanew,
+2.This application allows users to add their favorite cocktail recipie, edit, update or delete. 
+I also has a section with top bartenders and links for best bars in the world.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+2.UX
+The purpose of this app is to  provide platform for coctail lovers, so they cvan share 
+their favorite cocktail recipies as well as to provide some interesting informations on bars and bartenders. 
+Thge datata base of cocktail recipies was built based on IBA ( International Bartenders Association).
 
-## Gitpod Reminders
+3.FEATURES
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+A. Home Page
+Home page is my landing page where I briefly explain the purpose of the app and display  different cocktail categories. 
+Theyb are a sfollows:
+    *Classics
+    *New era drinks
+    *Specials
+    *Beer cocktails
+    *Wine cocktails
+    *Liquor coctails
+    *Flaming drinks
+    Non-alcoholic drinks
+    *Excentric
 
-`python3 -m http.server`
+When you click on one of the cocktail categories, you get a card deck with the pictures and short description 
+of the drink that belongs to one of the categories.
+Genre
 
-A blue button should appear to click: *Make Public*,
+4.USED TECHNOLOGIES:
 
-Another blue button should appear to click: *Open Browser*.
+HTML - used for building the framework of the project.
+CSS- used for styling some components of the app.
+PYTHON-languageto was used to create the functions that render the cocktail categories or cocktails  
+FLASK- framework was used to route python functions and link to the html pages.
+MATERIALIZE CSS- the main framework used to build the responsive front-end design of the website.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+JQuery was used to initialise the Materialize CSS framework.
+Google Fonts used as main fonts on website.
+MongoDB Atlas is the database used to store the music library.
 
-A blue button should appear to click: *Make Public*,
+Python was used to build the functions that rendered the songs from the mongodb database.
+python-dotenv was used to store configuration in the .env file and add them to the environment variables, separate from my code.
 
-Another blue button should appear to click: *Open Browser*.
+GitPodto- used to write my code
+GitHub used as a repository of the app.
+Heroku- used for the deployment of the app
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+TESTING- I tested every component of my app as I was building it: Navigation bar, Footer, CRUD functionalities,checking if all the elements are responsive 
+and look presentable on every device. Tested its functional aspect by asking firnds to add a recipie and tried to observed how long it takes to load the pagre.
+While testing I utested a lot using "inspect" from  Development Tools., sometimes check the code ( HTML, CSS) using Validators.
+I kept constamtly checking, reading error messages and testing different solutions untill I got it right. Initially, I had some problem with deployment 
+to Heroku as my configuration Vars were not set correctly.
 
-## Updates Since The Instructional Video
+Project was constantly tested via "inspect". I had some issues with loading my css file. Sometimes it didn't show the modifications I applied to a page and 
+had to rely on "Hard reload" quite often. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+DIFFICULTIERS:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+WWHAT I WOULD DO DIFFERENTLY IF I COULKD START IT OVER AGAIN;
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
---------
+THINGS I AM HAPPY ABOUT:
 
-Happy coding!
+I am definitely happy I kept my project simle, which helped me focus on pracrticing implementation of CRUD technologies. Before starting the project, I went through 
+most nof the tutorial videos again to make sure I know what and why I want to use. Also, my mentor and Slack community was wery helpful as they guided me through 
+the brainstorming part of the project, which was the most challenging for me. Once the wireframe was in place I was able to to work on it mostly independently.
+
+
+
+
+
+Credits
+
+Content
+Navbar, Footer and cards code were taken from Materialize, but they are very similar to those from the tutorial video.
+Code for the cards for the landing page were coppied from Youtube video "How to create Simple & Responsive Cards using Materialize CSS"
+The main code for add cocktail was coppied from Code institute tutorial and amodified and djusted to my apps requiements.
+
+T
+Media
+The photos used in this site were obtained from multiples blogs/articles/webs about recipies, bartending and mixology
+
+
+I received inspiration for this project from X
+Credits
+ 
+ Materials used in this proj
+
+

@@ -19,7 +19,7 @@
                 <ul>
                     <li>
                         <!--Cocktail name-->
-                        <span class="truncate vcoctail-name">
+                        <span >
                             {{coctail.coctail_name}} 
                         </span>
                     </li>
@@ -32,7 +32,7 @@
                     <li>
                     <span>
                     <!--Button to view  cocktail recipie-->
-                    <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class='btn view_button'>View Cocktail</a>
+                    <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class=" all-cocktails-width btn view_button">View Cocktail</a>
                         </span>
                     </li> 
                 </ul>
@@ -40,5 +40,6 @@
         </div>
     </div>
 {% endfor %}
+</div>
 </div>
 {% endblock %}

@@ -63,13 +63,16 @@ def add_coctail():
       
         coctail= {
             "category_name": request.form.get("category_name"),
+            "image_link": request.form.get("image_link"),
             "coctail_name": request.form.get("coctail_name"),
             "type": request.form.get("type"),
             "primary_alcohol": request.form.get("primary_alcohol"),
             "served": request.form.get("served"),
             "drinkware": request.form.get("drinkware"),
             "ingredients": request.form.get("ingredients"),
-            "preparation": request.form.get("preparations"),
+            "preparation": request.form.get("preparation"),
+            "notes": request.form.get("notes"),
+            
         }
 
         
@@ -106,17 +109,20 @@ def edit_coctail(coctail_id):
             "served": request.form.get("served"),
             "drinkware": request.form.get("drinkware"),
             "ingredients": request.form.get("ingredients"),
-            "preparation": request.form.get("preparations"),
+            "preparation": request.form.get("preparation"),
+            "notes": request.form.get("notes"),
         }
-        mongo.db.coctails.update({"_id": ObjectId(coctail_id)}, submit)
+        mongo.db.coctails.update_one({"_id": ObjectId(coctail_id)}, {"$set": submit})
         flash("Task Successfully Updated")
+        return redirect(url_for("show_coctail", coctail_id=coctail_id))
 
     coctail = mongo.db.coctails.find_one({"_id": ObjectId(coctail_id)})
+    print(coctail)
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_coctail.html", coctail=coctail, categories=categories)
 
 
- 
+
 
                            
 # routes to view cocktail information

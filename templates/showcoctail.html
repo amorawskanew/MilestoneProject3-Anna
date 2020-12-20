@@ -1,18 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 <!-- Title -->
 
-<div class="container  float-center">
+<div class="container  float-center move-down">
 <div class="card mb-3 left" style="max-width: 740px">
-  <div class="row g-0">
+    <div class="row g-0">
     <div class="col-md-4">
-      <img
+        <img
         src="{{coctail.image_link}}"
         alt="..."
-        class="img-fluid"
-      />
+        class="img-fluid .responsive "/>
+
     </div>
     <div class="col-md-8">
-      <div class="card-body">
+        <div class="card-body">
         <ul>
                 <li>
                     <!-- Cocktail category -->
@@ -24,6 +24,12 @@
                     <!-- Cocktail name -->
                     <span class="coctail-name">
                         {{coctail.coctail_name}} 
+                    </span>
+                </li>
+                <li>
+                    <!-- Image link -->
+                    <span class="image_link-name" hidden >
+                        {{coctail.image_link}} 
                     </span>
                 </li>
                 <li>
@@ -45,12 +51,6 @@
 
                     </span>
                 </li>  
-                <li>
-                    <!-- primary alcohol-->
-                    <span class="alcohol-name">
-                        {{coctail.primary_alcohol}} 
-                    </span>
-                </li>
                 <li>
                     <!-- Drinkware-->
                     <span class="alcohol-name">
@@ -76,26 +76,28 @@
                     </span>
                 </li>
         </ul>
-      </div>
-     </div>
-        <!-- Edit/Delete Section-->    
-        <div class="row card-action">
-            
-             <!-- Modal Trigger on Delete Button-->
-            <div class="col s12 ">
-                <div >
-                <button data-target="confirm" class=" modal-trigger btn delete_button col s4">Delete</button>
-                <form action="{{url_for('edit_coctail', coctail_id=coctail._id)}}" method="POST"> 
-                <button type="submit" name="action" class="btn edit_button col s4">Edit</button> 
-                </form>
-                </div>
-            </div>
         </div>
+    </div>
+        <!-- Edit/Delete Section-->    
+
+            
+            <!-- Modal Trigger on Delete Button-->
+
+                </div>  
+                        <div class= " row">
+                        <button data-target="confirm" class="center  buttons modal-trigger btn delete_button">Delete</button>
+                        <form action="{{url_for('edit_coctail', coctail_id=coctail._id)}}" method="GET"> 
+                        <button type="submit" name="action" class="btn edit_button buttons center ">Edit</button> 
+                        </form>
+                        </div>
+                        
+                </div>
+
             <!-- Modal Structure -->
                 <div id="confirm" class="modal modal-width">
                     <div class="modal-content">
                         <h4><i class="material-icons">warning</i> Hold, Up!</h4>
-                         <p>Are you sure you want to delete me?</p>
+                        <p>Are you sure you want to delete me?</p>
                     </div>
                     <div class="modal-footer">
                     <form action="{{url_for('delete_coctail', coctail_id=coctail._id)}}" method="POST">
@@ -104,10 +106,9 @@
                     </form>
                     </div>
                 </div> 
+    </div>
    
-  </div>
-</div>
-</div>
+
 
 {% endblock %}
 

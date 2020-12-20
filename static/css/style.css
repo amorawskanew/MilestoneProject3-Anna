@@ -32,7 +32,7 @@ img.image-size {
 }
 
 
-/* make images on showsong page same size */
+/* make images on showcoctail.html page same size */
 img.image-size-show {
   float: left;
   width: 550px;
@@ -41,6 +41,10 @@ img.image-size-show {
 }
 
 /* showcoctail.html page styling */
+
+.move-down{
+    padding:100px;
+}
 
 .responsive {
   width: 100%;
@@ -76,11 +80,6 @@ body {
     flex: 1 0 auto;
   }
 
-.page-footer {
-  background-color:  ;
-  margin-top: 2em;
-}
-
 .footer_link {
   color: #EC6632 ;
   text-decoration: none;
@@ -91,12 +90,3 @@ body {
   text-decoration: none;
 }
 
-/* Remove the Underline from All Hyperlinks */
-a:visited {
-  text-decoration: none;
-}
-
-a, a:hover, a:focus, a:active {
-      text-decoration: none;
-      color: inherit;
- }

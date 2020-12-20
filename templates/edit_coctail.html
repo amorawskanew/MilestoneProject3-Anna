@@ -7,11 +7,11 @@
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="{{ url_for('edit_coctail', coctail_id=coctail._id) }}">
             <!-- category selection -->
-			<div class="row">
+            <div class="row">
 				<div class="input-field col s12">
                     <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
 					<select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled>Choose Category</option>
+                    <option value="" disabled>Choose Category</option>
                         {% for category in categories %}
                             {% if category.category_name == coctail.category_name %}
                                 <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
@@ -32,19 +32,20 @@
                     <label for="coctail_name">Coctail Name</label>
                 </div>
             </div>
-            <!-- Add image url field -->    
+            <!--  image url field -->    
             <div class="input-field col s12">
                 <i class="material-icons prefix light-blue-text text-darken-4">add_a_photo</i>
-                <label for="image_link">URL for Coctail Image</label>
-                <input value="{{ coctail.coctail_name }}" id="image_link" name="image_link" type="text" required>
+                <label for="image_link">URL for Cocktail Image</label>
+                <input value="{{ coctail.image_link }}" id="image_link" name="image_link" type="text" required>
             </div>
             <!-- Coctail type -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <label for="type">Cocktail Type </label>
                     <input id="type" name="type" minlength="1" maxlength="200"
-                        value="{{ coctail.coctail_name }}" type="text" class="validate" required>
-                    <label for="type">Coctail Type</label>
+                        value="{{ coctail.type }}" type="text" class="validate" required>
+                    
                 </div>
             </div>
             <!-- Coctail primary alcohol-->
@@ -53,7 +54,7 @@
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
                     <i class="fas fa-wine-bottle-alt prefix light-blue-text text-darken-4"></i>
                     <input id="primary_alcohol" name="primary_alcohol" minlength="1" maxlength="200"
-                        value="{{ coctail.coctail_name }}" type="text" class="validate" required>
+                        value="{{ coctail.primary_alcohol }}" type="text" class="validate" required>
                     <label for="primary_alcohol">Primary alcohol</label>
                 </div>
             </div>    
@@ -62,7 +63,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
                     <input id="served" name="served" minlength="1" maxlength="200"
-                        value="{{ coctail.coctail_name }}" type="text" class="validate" required>
+                        value="{{ coctail.served }}" type="text" class="validate" required>
                     <label for="served">Served</label>
                 </div>
             </div>    
@@ -71,7 +72,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-glass-martini-alt prefix light-blue-text text-darken-4"></i>
                     <input id="drinkware" name="drinkware" minlength="1" maxlength="200"
-                        value="{{ coctail.coctail_name }}" type="text" class="validate" required>
+                        value="{{ coctail.drinkware}}" type="text" class="validate" required>
                     <label for="drinkware">Drinkware</label>
                 </div>
             </div>    
@@ -79,8 +80,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                    <textarea id="ingredients" name="ingredients" minlength="5"
-                        value="{{ coctail.coctail_name }}" maxlength="5000" class="materialize-textarea validate" required></textarea>
+                    <textarea id="ingredients" name="ingredients" minlength="1"
+                    maxlength="5000" class="materialize-textarea validate" required>{{-coctail.ingredients -}}</textarea>
                     <label for="ingredients">Ingredients</label>
                 </div>
             </div>
@@ -88,8 +89,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                    <textarea id="preparation" name="preparation" minlength="5"
-                        value="{{ coctail.coctail_name }}" maxlength="5000" class="materialize-textarea validate" required></textarea>
+                    <textarea id="preparation" name="preparation" minlength="1"
+                    maxlength="5000" class="materialize-textarea validate" required>{{- coctail.preparation -}}</textarea>
                     <label for="preparation">Preparation</label>
                 </div>
             </div>
@@ -97,8 +98,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="notes" name="notes" minlength="1" maxlength="1100"
-                        value="{{ coctail.coctail_name }}" type="text" class="validate" required>
+                    <textarea id="notes" name="notes" minlength="2"
+                    maxlength="5000" class="materialize-textarea validate" required> {{- coctail.notes -}}</textarea>
                     <label for="notes">Notes</label>
                 </div>
             </div>   
@@ -108,7 +109,7 @@
                 <i class="material-icons right">save</i>
             </button>
             </div>
-            </div>
+            
         </form>
     </div>
 

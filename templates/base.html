@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- <!-- link from music project -
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" type="text/css" /> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="styleshet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">  
@@ -16,11 +12,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     
- 
+
 <title>Coctail Collections</title>
 </head>
-<STYLE>A {
-text-decoration: none;} </STYLE>
+<style>A {
+text-decoration: none;} </style>
 <body>
  <header>
         <!-- top navbar -->
@@ -29,10 +25,11 @@ text-decoration: none;} </STYLE>
 				<a href="{{ url_for('home') }}" class="brand-logo-center text-color ">Coctail Collections</a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down text-color">
-					<li><a href="{{url_for('home')}}"class="text-color">Home</a></li>
+					<li><a  href="{{url_for('home')}}"class="text-color">Home</a></li>
                     <li><a href="{{url_for('get_coctail')}}" class="text-color">All Cocktails</a></li>
                     <li><a href="{{url_for('add_coctail')}}" class="text-color">Add New Cocktail</a></li>
                     <li><a href="{{url_for('stars')}}" class="text-color">Stars</a></li>
+                    
 				</ul>
 			</div>
 		</nav>
@@ -76,6 +73,7 @@ text-decoration: none;} </STYLE>
             </div>
             <div class="col l4 offset-l2 s12">
                 <ul>
+                <br>
                 <br>
                 <br>
                 <spam class="center">
@@ -122,7 +120,7 @@ text-decoration: none;} </STYLE>
     <script >
   
 /*
-    jQuery for MaterializeCSS initialization for add cocktail drop down folder
+    jQuery for MaterializeCSS initialization for drop down menu
 */
 $(document).ready(function () {
     $(".sidenav").sidenav({edge: "right"});
@@ -143,6 +141,7 @@ document.addEventListener("DOMContentLoaded",function(){
     $('select').formSelect();
   });
 
+   // button inicialization 
 $(document).ready(function(){
     $('.modal').modal();
   });

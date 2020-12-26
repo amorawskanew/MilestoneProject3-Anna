@@ -49,17 +49,31 @@ Heroku- used for the deployment of the app
 
 5.TESTING- I tested every component of my app as I was building it: Navigation bar, Footer, CRUD functionalities,checking if all the elements work properly. I tested every page on different devices: iphone, ipad, desktop .
 Also, I checked its functional aspect by asking firiends to add a recipie and observed how long it takes to load the pagre.
+<<<<<<< HEAD
+
+*Testing Tools
+"inspect" from  Development Tools.
+Validator check the code ( HTML, CSS) 
+=======
+>>>>>>> 860a43e204fd91659033f44fe28b0d353288c69d
 
 *Testing Tools
 "inspect" from  Development Tools.
 Validator check the code ( HTML, CSS) 
 
+6.DIFFICULTIERS:
+ I had some issues with loading my css file. Sometimes it didn't show the modifications I applied to a page and had to "hard reload" quite often. 
+ Some of the CSS styling is placed within showcoctail.html file as it didnt work when moved to style.css
 
+<<<<<<< HEAD
+
+=======
 6.DIFFICULTIERS:
  I had some issues with loading my css file. Sometimes it didn't show the modifications I applied to a page and had to "hard reload" quite often. 
  Some of the CSS styling is placed within showcoctail.html file as it didnt work when moved to style.css
 
 
+>>>>>>> 860a43e204fd91659033f44fe28b0d353288c69d
 7.THINGS I AM HAPPY ABOUT:
 
 I am definitely happy I kept my project simle, which helped me focus on pracrticing implementation of CRUD technologies. Before starting the project, I went through 
@@ -87,7 +101,13 @@ The photos used in this site were obtained from multiples blogs/articles/webs ab
 CREDITS
 I received inspiration for this project from my mentor,Owonikoko Oluwasun. 
 Also, a big thank you to all the slack community and Code Institute tutors.
+<<<<<<< HEAD
 
 Student, Anna Morawska
+=======
+
+Student, Anna Morawska
+
+>>>>>>> 860a43e204fd91659033f44fe28b0d353288c69d
 
 

@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<!-- css styling  for edit and delete buttons -->
+<!-- css styling  for edit, delete and cancel buttons -->
 <style>
     
 .delete_button {
@@ -49,7 +49,21 @@
   background-color:#2ea1d6;
   text-decoration: none;
 }
+.card-image{  
 
+        display: block;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        margin-top: 25px;  
+        float: left;
+    }
+
+/* css styling  for ingredients and notes */
+
+.ingredients-color, .notes-color { 
+    color: rgba(214, 73, 7, 0.959);
+
+}
 /* changing  horisontal card layout into vertical on mobile  */
 
 @media(max-width: 768px){
@@ -57,28 +71,30 @@
         flex-direction:column;
         width: 100%;
             }
-    .card-image{
-        
+    .style-card{
+    margin-top:10px !important;
+    margin-bottom: 10px !important;
+}        
+    .card-image{   
         object-fit: cover;
         float: center;
         width: 100%;
-        min-width: 200px;
+        min-width: 190px;
         height: auto;
 
         display: block;
         margin-left: 25px;
         margin-bottom: 25px;
-        margin-top: 25px;
-        
+        margin-top: 25px;  
     }
 }
 
 </style>
 
 <div class="container">
-    <div class="row">
+    <div class="row style-card">
         <div class="col s12">
-            <div class="card horizontal s12 m12 l12">
+            <div class="card horizontal s12 m12 l12 ">
                 <div class="card-image"><img class= "change_size" src="{{coctail.image_link}}"></div>
                 <div class="card-stacked">
                     <div class="card-content">
@@ -103,43 +119,46 @@
                 </li>
                 <li>
                     <!-- Cocktail type -->
-                    <span class="type-name">
+                    <span>
                         {{coctail.type}} 
                     </span>
                 </li>
                 <li>
                     <!-- primary alcohol-->
-                    <span class="alcohol-name">
+                    <span>
                         {{coctail.primary_alcohol}} 
                     </span>
                 </li>
                 <li>
                     <!-- served-->
-                    <span class="alcohol-name">
+                    <span>
                         {{coctail.served}} 
                     </span>
                 </li>  
                 <li>
                     <!-- Drinkware-->
-                    <span class="alcohol-name">
+                    <span>
                         {{coctail.drinkware}} 
                     </span>
                 </li>
+                 <br>
                 <li>
                     <!-- ingredients-->
-                    <span class="alcohol-name">
+                    <span class="ingredients-color">
                         {{coctail.ingredients}} 
                     </span>
                 </li>
+                <br>
                 <li>
                     <!-- preparation-->
-                    <span class="alcohol-name">
+                    <span>
                         {{coctail.preparation}} 
                     </span>
                 </li>
+                <br>
                 <li>
                     <!--note-->
-                    <span class="alcohol-name">
+                    <span class="notes-color"> 
                         {{coctail.notes}} 
                     </span>
                 </li>

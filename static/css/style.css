@@ -2,6 +2,10 @@
 
 
 /* Nav Bar */
+
+.brand-logo-center{
+    margin-left: 10px;
+ }   
 .text-color {
 
   text-transform: uppercase;
@@ -31,25 +35,39 @@ img.image-size {
   object-fit: cover;
 }
 
+/* styling cocktail names on cards for allcoctail.html page*/
+span.all-coctail-name {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3em;
+}
 
-/* make images on showcoctail.html page same size */
-img.image-size-show {
-  float: left;
-  width: 550px;
-  height: 550px;
-  object-fit: cover;
+/* positioning button  on allcocktails.html  and coctails_by_category.html cards */
+
+.view_cocktail_buttons{
+    min-height: 40px;
+}
+
+/* button to view cocktail on coctails_by_category.html s */
+
+.view_cocktail_buttons_category {
+    min-height: 60px;
 }
 
 /* showcoctail.html page styling */
 
-.move-down{
-    padding:100px;
+div.style-card{  
+    
+    margin-top: 20%;
+    margin-bottom: 20%;
+  
 }
 
 .responsive {
   width: 100%;
   height: auto;
 }
+/* styling coctktail category on showcoctail.html*/
 
 .category-name{
   text-transform: capitalize;
@@ -57,6 +75,8 @@ img.image-size-show {
   font-size: 1.5em;
   color: #EC6632;
 }
+
+/* styling coctktail name on showcoctail.html*/
 
 .coctail-name {
   text-transform: uppercase;

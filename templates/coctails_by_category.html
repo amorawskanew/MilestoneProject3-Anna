@@ -24,20 +24,18 @@
             <!--Coctail content-->
             <div class="card-content">
                 <ul>
-                    <li class="view_cocktail_buttons_category">  
+                    <li class="view_cocktail_buttons_category"> 
                         <!--Coctail name-->
                         <span>
                            <h5 class= "h-style">{{coctail.coctail_name}}</h5>  
                         </span>
                     </li>
+                    <li> 
                     <span>
                     <!--Button to view  cocktail recipie-->
                     <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class="btn view_button">View Cocktail</a>
                         </span>
-                    </li>    
-
-                        </span>
-                    </li>       
+                    </li>        
                 </ul>
             </div>
          

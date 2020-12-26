@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>home page of Cocktail Collections</title>
 </head>
 <body>
     
@@ -15,18 +15,18 @@
 {% block content %}
 <!-- header -->
 <h2 class="center" >
-Coctail Collections
+Cocktail Collections
 </h2>
 <!-- sub header/headline -->
 <h6 class="center" >
-Discover the world of coctails! 
+Discover the world of cocktails! 
 </h6>
 <!-- Description of website -->
 <div class="center">
-		<p>If you like throwing parties, Coctail Collections is a place for you! 
+		<p>If you like throwing parties, Cocktail Collections is a place for you! 
         You can find here all kinds of recipies from classical to modern era shakes.
         Choose the one you like and make a perfect drink for your friends!
-        If you know some special coctail recipie you can also share it here.
+        If you know some special cocktail recipie you can also share it here.
         </p>
 </div>
 
@@ -39,17 +39,17 @@ Discover the world of coctails!
                 <div class="card-image">
                 <img src="/static/images/classics.jpg" class="materialboxed" >
          <!--  <span class="card-title">Card Title</span> -->
-                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator"><i class= "material icons fas fa-glass-martini-alt prefix" ></i></a>
                 </div>
                 <div class="card-content">
                 <p> Classics </p>
                 </div>
                 <div class="card-reveal">
-                <span class="card-title"> The classic cocktail
+                <span class="card-title"> <i class="right">x</i>The classic cocktail
                  appeared on the scene after 1887, when  Jerry Thomas’
                  Bar-Tender’s Guide was published (it was the first real 
                  cocktail book ever published in the U.S., and gave rise to all sorts of
-                  mixology. <i class="right"></i></span>
+                  mixology.</span>
                 </div>
                 <div class="card-action">
                   <a href="{{url_for('get_coctail_by_category', category='Classics')}}">Click here</a>
@@ -61,13 +61,13 @@ Discover the world of coctails!
             <div class="card sticky-action">
                 <div class="card-image">
                 <img src="/static/images/new_era.jpg" class="materialboxed">
-                <a class=" btn blue-grey darken-4 btn-floating halfway-fab pulse activator footer_link fas fa-glass-martini-alt prefix ">+</a>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator"><i class= "material icons fas fa-glass-martini-alt prefix" ></i></a>
                 </div>
                 <div class="card-content">
                 <p>New Era drinks</p>
                 </div>
                 <div class="card-reveal">
-                <span class="card-title">New era drinks are Classics with a modern twist.  <i class="right"></i></span>
+                <span class="card-title"><i class="right">x</i>New era drinks are Classics with a modern twist.</span> 
                 </div>
                 <div class="card-action">
                 <a href="{{url_for('get_coctail_by_category', category='New era drinks')}}">Link me</a>
@@ -79,13 +79,13 @@ Discover the world of coctails!
             <div class="card sticky-action">
                 <div class="card-image">
                 <img src="/static/images/specials.jpg" class="materialboxed">
-                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator"><i class= "material icons fas fa-glass-martini-alt prefix" ></i></a>
                 </div>
                 <div class="card-content">
                 <p>Specials</p>
                 </div>
                 <div class="card-reveal">
-                <span class="card-title">Specials are also known as the unforgettables. Once you try them you will remember forever.<i class="right"></i></span>
+                <span class="card-title"><i class="right">x</i>Specials are also known as the unforgettables. Once you try them you will remember forever.</span>
                 </div>
                 <div class="card-action">
                 <a href="{{url_for('get_coctail_by_category', category = 'Specials')}}">Click me</a>
@@ -101,13 +101,13 @@ Discover the world of coctails!
             <div class="card sticky-action">
                 <div class="card-image">
                 <img src="/static/images/beer.jpg" class="materialboxed">
-                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator"><i class= "material icons fas fa-glass-martini-alt prefix" ></i></a>
                 </div>
                 <div class="card-content">
                 <p>Beer Cocktails </p>
                 </div>
                 <div class="card-reveal">
-                <span class="card-title">Beer cocktails are generally mixes of beers and juices.<i class="right"></i></span>
+                <span class="card-title"><i class="right">x</i>Beer cocktails are generally mixes of beers and juices.</span>
                 </div>
                 <div class="card-action">
                 <a href="{{url_for('get_coctail_by_category', category = 'Beer coctails')}}">Click Clic</a>
@@ -119,13 +119,13 @@ Discover the world of coctails!
             <div class="card sticky-action">
                 <div class="card-image">
                 <img src="/static/images/vodka.jpg" class="materialboxed">
-                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator"><i class= "material icons fas fa-glass-martini-alt prefix" ></i></a>
                 </div>
                 <div class="card-content">
                 <p>Liquor Cocktails</p>
                 </div>
                 <div class="card-reveal">
-                <span class="card-title">Liquor Cocktails are stronger mixes and usually drunk in the evening. <i class="right"></i></span>
+                <span class="card-title"><i class="right">x</i>Liquor Cocktails are stronger mixes and usually drunk in the evening.</span>
                 </div>
                 <div class="card-action">
                 <a href="{{url_for('get_coctail_by_category', category = 'Liquor coctails')}}">Check it out</a>
@@ -137,13 +137,13 @@ Discover the world of coctails!
             <div class="card sticky-action">
                 <div class="card-image">
                 <img src="/static/images/wine.jpg" class="materialboxed">
-                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator"><i class= "material icons fas fa-glass-martini-alt prefix" ></i></a>
                 </div>
                 <div class="card-content">
                 <p>Wine Cocktails</p>
                 </div>
                 <div class="card-reveal">
-                <span class="card-title"> Wine Cocktails are lighter, good for late afternoon with your friends.<i class="right"></i></span>
+                <span class="card-title"><i class="right">x</i> Wine Cocktails are lighter, good for late afternoon with your friends.</span>
                 </div>
                 <div class="card-action">
                  <a href="{{url_for('get_coctail_by_category', category = 'Wine coctails')}}">Drink me</a>
@@ -160,16 +160,16 @@ Discover the world of coctails!
             <div class="card sticky-action">
                 <div class="card-image">
                 <img src="/static/images/flames.jpg" class="materialboxed">
-                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator"><i class= "material icons fas fa-glass-martini-alt prefix" ></i></a>
                 </div>
                 <div class="card-content">
                 <p>Flaming Drinks </p>
                 </div>
                 <div class="card-reveal">
-                <span class="card-title"> 
+                <span class="card-title"><i class="right">x</i> 
                   Flaming Drinks are all about showmanship. You need a lighter and a high alcohol content for this to work.
                 *But remember, the longer you leave it lit, the more alcohol is being burnt off and the weaker the drink becomes.
-                 <i class="right"></i></span>
+                </span>
                 </div>
                 <div class="card-action">
                 <a href="{{url_for('get_coctail_by_category', category = 'Flaming coctails')}}">Open me</a>
@@ -181,13 +181,13 @@ Discover the world of coctails!
             <div class="card sticky-action">
                 <div class="card-image">
                 <img src="/static/images/non_alcoholic.jpg" class="materialboxed">
-                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator"><i class= "material icons fas fa-glass-martini-alt prefix" ></i></a>
                 </div>
                 <div class="card-content">
                 <p>Non-alcoholic </p>
                 </div>
                 <div class="card-reveal">
-                <span class="card-title">Alcohol free! Can be enjoyed even by babies.<i class="right"></i></span>
+                <span class="card-title"><i class="right">x</i>Alcohol free! Can be enjoyed even by young children.</span>
                 </div>
                 <div class="card-action">
                 <a href="{{url_for('get_coctail_by_category', category = 'Non-alcoholic coctails')}}">Try me</a>
@@ -199,13 +199,13 @@ Discover the world of coctails!
             <div class="card sticky-action">
                 <div class="card-image">
                 <img src="/static/images/other.jpg" class="materialboxed">
-                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator">+</a>
+                <a class="btn blue-grey darken-4 btn-floating halfway-fab pulse activator"><i class= "material icons fas fa-glass-martini-alt prefix" ></i></a>
                 </div>
                 <div class="card-content">
                 <p>Excentric</p>
                 </div>
                 <div class="card-reveal">
-                <span class="card-title">Excentric cocktails are like piece of artwork. You cannot take your eyes off them. <i class="right"></i></span>
+                <span class="card-title"><i class="right">x</i>Excentric cocktails are like piece of artwork. You cannot take your eyes off them.</span>
                 </div>
                 <div class="card-action">
                 <a href="{{url_for('get_coctail_by_category', category = 'Excentric coctails')}}">See more</a>
@@ -213,8 +213,5 @@ Discover the world of coctails!
             </div>
         </div>
     </div>  
-
-
-
 
 {% endblock %}

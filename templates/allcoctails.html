@@ -1,5 +1,7 @@
 
 {% extends 'base.html' %} {% block content %}
+
+
 <!-- Title-->
 <div class="s12 m3 l3">
     <h3 class="h-style">All Cocktails</h3>
@@ -15,25 +17,19 @@
                     <span class="card-title">{{coctail.category_name}}</span>
             </div>
             <!--Cocktail info-->
-            <div class="card-content">
+            <div class="card-content center text">
                 <ul>
-                    <li>
+                    <li class="view_cocktail_buttons_category"> 
                         <!--Cocktail name-->
-                        <span >
+                        <span>
                             {{coctail.coctail_name}} 
                         </span>
                     </li>
                     <li>
-                        <!--Coctail type-->
-                        <span>
-                            {{coctail.type}} 
-                        </span>
-                    </li>
-                    <li>
-                    <span>
+                    <span class="style">
                     <!--Button to view  cocktail recipie-->
                     <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class=" all-cocktails-width btn view_button">View Cocktail</a>
-                        </span>
+                    </span>
                     </li> 
                 </ul>
             </div>

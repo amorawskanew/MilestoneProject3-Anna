@@ -1,19 +1,85 @@
 {% extends 'base.html' %} {% block content %}
-<!-- Title -->
 
-<div class="container  float-center move-down">
-<div class="card mb-3 left" style="max-width: 740px">
-    <div class="row g-0">
-    <div class="col-md-4">
-        <img
-        src="{{coctail.image_link}}"
-        alt="..."
-        class="img-fluid .responsive "/>
+<!-- css styling  for edit and delete buttons -->
+<style>
+    
+.delete_button {
+  background-color: rgb(145, 24, 24);
+  border-radius: 5px;
+  margin: 1em 1em 1em 1em;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif !important; 
+}
 
-    </div>
-    <div class="col-md-8">
-        <div class="card-body">
-        <ul>
+.delete_button:hover {
+  background-color:#c01f45;
+
+}
+
+.edit_button {
+  background-color: #380c70;
+  border-radius: 5px;
+  margin: 1em 1em 1em 1em;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif !important; 
+}
+
+.edit_button:hover {
+  background-color: rgb(143, 5, 143);
+  
+}
+
+.cancel_button {
+  background-color: #198abe;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.cancel_button {
+  background-color: #198abe;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+
+.cancel_button:hover {
+  background-color:#2ea1d6;
+  text-decoration: none;
+}
+
+/* changing  horisontal card layout into vertical on mobile  */
+
+@media(max-width: 768px){
+    .horizontal {  
+        flex-direction:column;
+        width: 100%;
+            }
+    .card-image{
+        
+        object-fit: cover;
+        float: center;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-left: 25px;
+        margin-top: 25px;
+        
+    }
+}
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card horizontal m12 l12">
+                <div class="card-image"><img class= "change_size" src="{{coctail.image_link}}"></div>
+                <div class="card-stacked">
+                    <div class="card-content">
+            <ul>
                 <li>
                     <!-- Cocktail category -->
                     <span class="category-name">
@@ -48,7 +114,6 @@
                     <!-- served-->
                     <span class="alcohol-name">
                         {{coctail.served}} 
-
                     </span>
                 </li>  
                 <li>
@@ -75,42 +140,42 @@
                         {{coctail.notes}} 
                     </span>
                 </li>
-        </ul>
+            </ul>
+          </div>
+         
+        <!-- Share/Edit/Delete Section-->    
+        <div class="row card-action">
+           
+             <!-- Modal Trigger on Delete Button-->
+            <div class="col s12">
+                <button data-target="confirm" class="modal-trigger btn delete_button col s4">Delete</button>
+                 
+
+                <form action="{{url_for('edit_coctail', coctail_id=coctail._id)}}" method="GET"> 
+                        <button type="submit" name="action" class=" btn edit_button col s4 ">Edit</button> 
+                        </form> 
+                
+            </div>
         </div>
-    </div>
-        <!-- Edit/Delete Section-->    
-
             
-            <!-- Modal Trigger on Delete Button-->
-
-                </div>  
-                        <div class= " row">
-                        <button data-target="confirm" class="center  buttons modal-trigger btn delete_button">Delete</button>
-                        <form action="{{url_for('edit_coctail', coctail_id=coctail._id)}}" method="GET"> 
-                        <button type="submit" name="action" class="btn edit_button buttons center ">Edit</button> 
+        <div class="row">
+                <div id="confirm" class="modal modal-width">
+                        <div class="modal-content">
+                            <h4><i class="material-icons">warning</i> Hold, Up!</h4>
+                            <p>Are you sure you want to delete me?</p>
+                        </div>
+                        <div class="modal-footer">
+                        <form action="{{url_for('delete_coctail', coctail_id=coctail._id)}}" method="POST">
+                        <button type="submit" name="action" class="btn delete_button col s3">Delete</button>
+                        <a href class="btn cancel_button modal-close col s3">Cancel</a>
                         </form>
                         </div>
-                        
-                </div>
-
-            <!-- Modal Structure -->
-                <div id="confirm" class="modal modal-width">
-                    <div class="modal-content">
-                        <h4><i class="material-icons">warning</i> Hold, Up!</h4>
-                        <p>Are you sure you want to delete me?</p>
-                    </div>
-                    <div class="modal-footer">
-                    <form action="{{url_for('delete_coctail', coctail_id=coctail._id)}}" method="POST">
-                    <button type="submit" name="action" class="btn delete_button col s4">Delete</button>
-                    <a href class="btn cancel_button modal-close col s4">Cancel</a>
-                    </form>
-                    </div>
+                    </div>    
                 </div> 
-    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
    
-
-
 {% endblock %}
-
-
-

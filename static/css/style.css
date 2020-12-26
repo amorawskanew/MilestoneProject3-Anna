@@ -22,29 +22,38 @@
 }
 
 
-/* make images in card same size on all cocktails and category page*/
+/* make images in card same size on allcocktails.html and coctails_by_category.html page*/
 
 img.image-size {
-  float: left;
+  float: center;
   width: 100px;
   height: 300px;
   object-fit: cover;
 }
 
 
+
+/* positioning button  on allcocktails.html  and coctails_by_category.html cards */
+
+.view_cocktail_buttons{
+    min-height: 40px;
+}
+
+/* button to view cocktail on coctails_by_category.html s */
+
+.view_cocktail_buttons_category{
+    min-height: 60px;
+}
+
 /* make images on showcoctail.html page same size */
 img.image-size-show {
-  float: left;
+  float: center;
   width: 550px;
   height: 550px;
   object-fit: cover;
 }
+ 
 
-/* showcoctail.html page styling */
-
-.move-down{
-    padding:100px;
-}
 
 .responsive {
   width: 100%;
@@ -64,6 +73,14 @@ img.image-size-show {
   font-size: 2em;
   font-style: italic;
 }
+
+/* Modal Styling */
+.modal-width {
+  max-height: 40%;
+  width: 60%;
+}
+
+
 
 
 /* Footer */

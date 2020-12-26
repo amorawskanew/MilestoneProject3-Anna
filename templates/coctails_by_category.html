@@ -2,6 +2,7 @@
 {% extends 'base.html'%} {% block content %}
 <!-- Title -->
 
+
 <div class="col s12">
   <h3 class="h-style center">{{category_name}}</h3>
 </div>
@@ -15,7 +16,7 @@
     <!-- coctail image -->
     <div class="col l4 m6 s12">
     
-        <div class="card large">
+        <div class="card large center">
             <div class="card-image">
                     <img class="image-size" src="{{coctail.image_link}}" alt="URL Image">
                     <span class="card-title" >{{coctail.category_name}}</span>
@@ -23,23 +24,12 @@
             <!--Coctail content-->
             <div class="card-content">
                 <ul>
-                    <li>
+                    <li class="view_cocktail_buttons_category">  
                         <!--Coctail name-->
-                        <span >
+                        <span>
                            <h5 class= "h-style">{{coctail.coctail_name}}</h5>  
                         </span>
                     </li>
-                    <li>
-                        <!--Coctail type-->
-                        <span>
-                            {{coctail.type}} 
-                        </span>
-                    </li>
-                    <li>
-                        <!--Primary_alcohol-->
-                        <span>
-                        
-                        <li>
                     <span>
                     <!--Button to view  cocktail recipie-->
                     <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class="btn view_button">View Cocktail</a>

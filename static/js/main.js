@@ -1,4 +1,6 @@
+let clipboard = new Clipboard('.copy-icon');
 
+$(document).ready(function(){
 /*
     jQuery for MaterializeCSS initialization for drop down menu
 */
@@ -29,4 +31,4 @@ $(document).ready(function(){
     // Fades out flash message after it has been read by user
     $("#flash-msg").delay(4500).fadeOut("slow");
 
- 
+});

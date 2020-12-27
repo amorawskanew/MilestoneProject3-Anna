@@ -93,14 +93,20 @@ div.style-card {
   font-style: italic;
 }
 
-/*........................................................... .flash-messages */
+/*............................................................flash-messages */
+
+
 .flash-messages{
-    padding: 1% 0% 1% 2%;
-    background-color:  #EC6632;
+    padding: 2% 2% 2% 2%;
     color: #000000;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    margin-left: 10%;
+    margin-right: 10%; 
+    background-color: hsla(17, 83%, 56%, 0.25);
 }
+
+ 
 /*........................................................... Footer */
 
 

@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, url_for, flash,redirect
+from flask import Flask, render_template, request, url_for, flash, redirect
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from bson.objectid import ObjectId
@@ -75,17 +75,15 @@ def add_coctail():
             
         }
 
-        
-
         mongo.db.coctails.insert_one(coctail)
-        flash("Task Successfully Added")
+        flash("New Cocktail Successfully Added")
         return redirect(url_for("get_coctail"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("addcoctail.html",  categories=categories)
 
 
-# inserts new cocktail
+# route to insert new cocktail
 @app.route('/insert_coctail', methods=['GET', 'POST'])
 def insert_coctail():
     coctails =  mongo.db.coctails
@@ -113,7 +111,7 @@ def edit_coctail(coctail_id):
             "notes": request.form.get("notes"),
         }
         mongo.db.coctails.update_one({"_id": ObjectId(coctail_id)}, {"$set": submit})
-        flash("Task Successfully Updated")
+        flash("Cocktail Information Successfully Updated")
         return redirect(url_for("show_coctail", coctail_id=coctail_id))
 
     coctail = mongo.db.coctails.find_one({"_id": ObjectId(coctail_id)})
@@ -134,11 +132,11 @@ def show_coctail(coctail_id):
     
 
 
- # Removew cocktail
+ # Remove cocktail
 @app.route("/delete_coctail/<coctail_id>", methods=["GET", "POST"])
 def delete_coctail(coctail_id):
     mongo.db.coctails.remove({"_id": ObjectId(coctail_id)})
-    flash("Task Successfully Deleted")
+    flash("Cocktail Successfully Deleted")
     return redirect(url_for("get_coctail"))
 
 

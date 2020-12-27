@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Anton:300,400,500,600,700|Poppins:100,200,300,400,500,600,700");
 
 
-/* Nav Bar */
+/* .....................................................Nav Bar */
 
 .brand-logo-center{
     margin-left: 10px;
@@ -25,8 +25,9 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* styling cocktail category names on cards for home.html page*/
+/* .........................................................home.html  */
 
+/* styling cocktail category names on home.html cards */
 div.card-content p {
 font-size: large;
 }
@@ -34,8 +35,17 @@ font-size: large;
 div.home-page-intro p {
 font-size: large;
 }
-/* make images in card same size on all cocktails and category page*/
 
+/* ............................................ allcoctail.html, coctail_by_category.html */
+
+/* styling cocktail category names on allcoctail.html cards */
+span.all-coctail-name {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3em;
+}
+
+/* making card images the same size on allcoctails.html and coctail_by_category.html */
 img.image-size {
   float: left;
   width: 100px;
@@ -43,26 +53,17 @@ img.image-size {
   object-fit: cover;
 }
 
-/* styling cocktail names on cards for allcoctail.html page*/
-span.all-coctail-name {
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-size: 1.3em;
-}
-
-/* positioning button  on allcocktails.html  and coctails_by_category.html cards */
-
+/* positioning card button on allcocktails.html  and coctails_by_category.html */
 .view_cocktail_buttons{
     min-height: 40px;
 }
 
-/* button to view cocktail on coctails_by_category.html s */
-
+/* button to view cocktail on coctails_by_category.html */
 .view_cocktail_buttons_category {
     min-height: 60px;
 }
 
-/* showcoctail.html page styling */
+/*.................................................. showcoctail.html page styling */
 
 div.style-card {  
     
@@ -75,8 +76,8 @@ div.style-card {
   width: 100%;
   height: auto;
 }
-/* styling coctktail category on showcoctail.html*/
 
+/* styling coctktail category on showcoctail.html*/
 .category-name {
   text-transform: capitalize;
   font-family: "Poppins", sans-serif;
@@ -85,7 +86,6 @@ div.style-card {
 }
 
 /* styling coctktail name on showcoctail.html*/
-
 .coctail-name {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
@@ -93,8 +93,15 @@ div.style-card {
   font-style: italic;
 }
 
-
-/* Footer */
+/*........................................................... .flash-messages */
+.flash-messages{
+    padding: 1% 0% 1% 2%;
+    background-color:  #EC6632;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+/*........................................................... Footer */
 
 
 body {

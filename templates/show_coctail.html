@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 
 <!-- css styling  for edit, delete and cancel buttons -->
 <style>
@@ -92,112 +93,113 @@
 </style>
 
 <div class="container">
-    <div class="row style-card">
-        <div class="col s12">
-            <div class="card horizontal s12 m12 l12 ">
-                <div class="card-image"><img class= "change_size" src="{{coctail.image_link}}"></div>
-                <div class="card-stacked">
-                    <div class="card-content">
+  <div class="row style-card">
+    <div class="col s12">
+      <div class="card horizontal s12 m12 l12">
+        <div class="card-image">
+          <img class= "change_size" src="{{coctail.image_link}}" alt="URL
+          Image">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
             <ul>
-                <li>
-                    <!-- Cocktail category -->
-                    <span class="category-name">
-                        {{coctail.category_name}} 
-                    </span>
-                </li>
-                <li>
-                    <!-- Cocktail name -->
-                    <span class="coctail-name">
-                        {{coctail.coctail_name}} 
-                    </span>
-                </li>
-                <li>
-                    <!-- Image link -->
-                    <span class="image_link-name" hidden >
-                        {{coctail.image_link}} 
-                    </span>
-                </li>
-                <li>
-                    <!-- Cocktail type -->
-                    <span>
-                        {{coctail.type}} 
-                    </span>
-                </li>
-                <li>
-                    <!-- primary alcohol-->
-                    <span>
-                        {{coctail.primary_alcohol}} 
-                    </span>
-                </li>
-                <li>
-                    <!-- served-->
-                    <span>
-                        {{coctail.served}} 
-                    </span>
-                </li>  
-                <li>
-                    <!-- Drinkware-->
-                    <span>
-                        {{coctail.drinkware}} 
-                    </span>
-                </li>
-                 <br>
-                <li>
-                    <!-- ingredients-->
-                    <span class="ingredients-color">
-                        {{coctail.ingredients}} 
-                    </span>
-                </li>
-                <br>
-                <li>
-                    <!-- preparation-->
-                    <span>
-                        {{coctail.preparation}} 
-                    </span>
-                </li>
-                <br>
-                <li>
-                    <!--note-->
-                    <span class="notes-color"> 
-                        {{coctail.notes}} 
-                    </span>
-                </li>
+              <li>
+                <!-- Cocktail category -->
+                <span class="category-name"> {{coctail.category_name}} </span>
+              </li>
+              <li>
+                <!-- Cocktail name -->
+                <span class="coctail-name"> {{coctail.coctail_name}} </span>
+              </li>
+              <li>
+                <!-- Image link -->
+                <span class="image_link-name" hidden>
+                  {{coctail.image_link}}
+                </span>
+              </li>
+              <li>
+                <!-- Cocktail type -->
+                <span> {{coctail.type}} </span>
+              </li>
+              <li>
+                <!-- primary alcohol-->
+                <span> {{coctail.primary_alcohol}} </span>
+              </li>
+              <li>
+                <!-- served-->
+                <span> {{coctail.served}} </span>
+              </li>
+              <li>
+                <!-- Drinkware-->
+                <span> {{coctail.drinkware}} </span>
+              </li>
+              <br/>
+              <li>
+                <!-- ingredients-->
+                <span class="ingredients-color"> {{coctail.ingredients}} </span>
+              </li>
+              <br/>
+              <li>
+                <!-- preparation-->
+                <span> {{coctail.preparation}} </span>
+              </li>
+              <br />
+              <li>
+                <!--notes-->
+                <span class="notes-color"> {{coctail.notes}} </span>
+              </li>
             </ul>
           </div>
-         
-        <!-- Share/Edit/Delete Section-->    
-        <div class="row card-action">
-           
-             <!-- Modal Trigger on Delete Button-->
-            <div class="col s12">
-                <button data-target="confirm" class="modal-trigger btn delete_button col s4">Delete</button>
-                 
 
-                <form action="{{url_for('edit_coctail', coctail_id=coctail._id)}}" method="GET"> 
-                        <button type="submit" name="action" class=" btn edit_button col s4 ">Edit</button> 
-                        </form> 
-                
+          <!-- Share/Edit/Delete Section-->
+          <div class="row card-action">
+            <!-- Modal Trigger on Delete Button-->
+            <div class="col s12">
+              <button
+                data-target="confirm"
+                class="modal-trigger btn delete_button col s4">
+                Delete
+              </button>
+              <form
+                action="{{url_for('edit_coctail', coctail_id=coctail._id)}}"
+                method="GET">
+                <button
+                  type="submit"
+                  name="action"
+                  class="btn edit_button col s4">
+                  Edit
+                </button>
+              </form>
             </div>
-        </div>
-            
-        <div class="row">
-                <div id="confirm" class="modal modal-width">
-                        <div class="modal-content">
-                            <h4><i class="material-icons">warning</i> Hold, Up!</h4>
-                            <p>Are you sure you want to delete me?</p>
-                        </div>
-                        <div class="modal-footer">
-                        <form action="{{url_for('delete_coctail', coctail_id=coctail._id)}}" method="POST">
-                        <button type="submit" name="action" class="btn delete_button col s4">Delete</button>
-                        <a href class="btn cancel_button modal-close col s4">Cancel</a>
-                        </form>
-                        </div>
-                    </div>    
-                </div> 
-                </div>
+          </div>
+
+          <div class="row">
+            <div id="confirm" class="modal modal-width">
+              <div class="modal-content">
+                <h4><i class="material-icons">warning</i> Hold, Up!</h4>
+                <p>Are you sure you want to delete me?</p>
+              </div>
+              <div class="modal-footer">
+                <form
+                  action="{{url_for('delete_coctail', coctail_id=coctail._id)}}"
+                  method="POST">
+                  <button
+                    type="submit"
+                    name="action"
+                    class="btn delete_button col s4">
+                    Delete
+                  </button>
+                  <a href class="btn cancel_button modal-close col s4">
+                    Cancel
+                  </a>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </div>  
+      </div>
+    </div>
+  </div>
 </div>
-   
+
 {% endblock %}

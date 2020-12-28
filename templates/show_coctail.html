@@ -2,11 +2,15 @@
 
 <!-- css styling  for edit, delete and cancel buttons -->
 <style>
-    
+   /* Site Buttons */
+.btn {
+  margin: auto;
+} 
 .delete_button {
   background-color: rgb(145, 24, 24);
+  border: none;
   border-radius: 5px;
-  margin: 1em 1em 1em 1em;
+  margin: 0.5em 0.5em 0.5em 0.5em !important;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif !important; 
 }
@@ -18,8 +22,9 @@
 
 .edit_button {
   background-color: #380c70;
+  border: none;
   border-radius: 5px;
-  margin: 1em 1em 1em 1em;
+ margin: 0.5em 0.5em 0.5em 0.5em !important;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif !important; 
 }
@@ -33,22 +38,17 @@
   background-color: #198abe;
   border: none;
   border-radius: 5px;
+  margin: 0.5em 0.5em 0.5em 0.5em !important;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-}
-
-.cancel_button {
-  background-color: #198abe;
-  border: none;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .cancel_button:hover {
   background-color:#2ea1d6;
   text-decoration: none;
 }
+
+
 .card-image{  
 
         display: block;
@@ -64,9 +64,9 @@
     color: rgba(214, 73, 7, 0.959);
 
 }
-/* changing  horisontal card layout into vertical on mobile  */
+/* changing  horizontal card layout into vertical on mobile  */
 
-@media(max-width: 768px){
+@media(max-width: 1024px){
     .horizontal {  
         flex-direction:column;
         width: 100%;
@@ -188,8 +188,8 @@
                         </div>
                         <div class="modal-footer">
                         <form action="{{url_for('delete_coctail', coctail_id=coctail._id)}}" method="POST">
-                        <button type="submit" name="action" class="btn delete_button col s3">Delete</button>
-                        <a href class="btn cancel_button modal-close col s3">Cancel</a>
+                        <button type="submit" name="action" class="btn delete_button col s4">Delete</button>
+                        <a href class="btn cancel_button modal-close col s4">Cancel</a>
                         </form>
                         </div>
                     </div>    

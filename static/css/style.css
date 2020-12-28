@@ -130,3 +130,93 @@ body {
   color: #CD4813;
   text-decoration: none;
 }
+
+/*...........................................................css styling  for edit, delete and cancel buttons */
+
+
+    /* Site Buttons */
+.btn {
+  margin: auto;
+} 
+.delete_button {
+  background-color: rgb(145, 24, 24);
+  border: none;
+  border-radius: 5px;
+  margin: 0.5em 0.5em 0.5em 0.5em !important;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif !important; 
+}
+
+.delete_button:hover {
+  background-color:#c01f45;
+
+}
+
+.edit_button {
+  background-color: #380c70;
+  border: none;
+  border-radius: 5px;
+ margin: 0.5em 0.5em 0.5em 0.5em !important;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif !important; 
+}
+
+.edit_button:hover {
+  background-color: rgb(143, 5, 143);
+  
+}
+
+.cancel_button {
+  background-color: #198abe;
+  border: none;
+  border-radius: 5px;
+  margin: 0.5em 0.5em 0.5em 0.5em !important;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.cancel_button:hover {
+  background-color:#2ea1d6;
+  text-decoration: none;
+}
+
+
+.card-image{  
+
+        display: block;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        margin-top: 25px;  
+        float: left;
+    }
+
+/* css styling  for ingredients and notes */
+
+.ingredients-color, .notes-color { 
+    color: rgba(214, 73, 7, 0.959);
+
+}
+/* changing  horizontal card layout into vertical on mobile  */
+
+@media(max-width: 768px){
+    .horizontal {  
+        flex-direction:column;
+        width: 100%;
+            }
+    .style-card{
+    margin-top:10px !important;
+    margin-bottom: 10px !important;
+}        
+    .card-image{   
+        object-fit: cover;
+        float: center;
+        width: 100%;
+        min-width: 190px;
+        height: auto;
+
+        display: block;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        margin-top: 25px;  
+    }
+}

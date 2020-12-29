@@ -27,7 +27,6 @@
 
 
 /* styling cocktail category names on home.html cards */
-
 div.card-content p {
 	font-size: large;
 }
@@ -37,11 +36,10 @@ div.home-page-intro p {
 }
 
 
-/* ............................................ allcoctail.html, coctail_by_category.html */
+/* ............................................ all_coctail.html, coctail_by_category.html */
 
 
-/* styling cocktail category names on allcoctail.html cards */
-
+/* styling cocktail category names on all_coctail.html cards */
 span.all-coctail-name {
 	text-transform: uppercase;
 	font-family: "Poppins", sans-serif;
@@ -50,7 +48,6 @@ span.all-coctail-name {
 
 
 /* making card images the same size on allcoctails.html and coctail_by_category.html */
-
 img.image-size {
 	float: left;
 	width: 100px;
@@ -62,7 +59,6 @@ img.image-size {
 /* Min height for the card text so the "view" button stays 
 on the same level for all the cards on all_coctails.html 
 and coctails_by_category.html page */
-
 .view_cocktail_buttons {
 	min-height: 60px;
 }
@@ -74,7 +70,7 @@ div.stars-card {
 }
 
 
-/*.................................................. showcoctail.html page styling */
+/*.................................................. show_coctail.html page styling */
 
 div.style-card {
 	margin-top: 20%;
@@ -87,8 +83,7 @@ div.style-card {
 }
 
 
-/* styling coctktail category name on showcoctail.html*/
-
+/* styling coctktail category name on show_coctail.html*/
 .category-name {
 	text-transform: capitalize;
 	font-family: "Poppins", sans-serif;
@@ -97,8 +92,7 @@ div.style-card {
 }
 
 
-/* styling coctktail name on showcoctail.html*/
-
+/* styling coctktail name on show_coctail.html*/
 .coctail-name {
 	text-transform: uppercase;
 	font-family: "Poppins", sans-serif;
@@ -107,50 +101,9 @@ div.style-card {
 }
 
 
-/*............................................................flash-messages */
-
-.flash-messages {
-	padding: 2% 2% 2% 2%;
-	color: #000000;
-	font-family: "Poppins", sans-serif;
-	font-weight: 200;
-	margin-left: 10%;
-	margin-right: 10%;
-	background-color: hsla(17, 83%, 56%, 0.25);
-}
-
-
-/*........................................................... Footer */
-
-body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-	text-decoration: none;
-}
-
-main {
-	flex: 1 0 auto;
-}
-
-.footer_link {
-	color: #EC6632;
-	text-decoration: none;
-}
-
-.footer_link:hover {
-	color: #CD4813;
-	text-decoration: none;
-}
-
-
-
-
-
 /*..............................css styling  for edit, delete and cancel buttons */
 
    /* Site Buttons */
-
 .delete_button {
   background-color: rgb(145, 24, 24)!important;
   border: none;
@@ -202,14 +155,38 @@ main {
         float: left;
     }
 
-/* css styling  for ingredients and notes */
-
+/* CSS styling  for ingredients and notes on show_coctail.html*/
 .ingredients-color, .notes-color { 
     color: rgba(214, 73, 7, 0.959);
 
 }
-/* changing  horizontal card layout into vertical on mobile  */
 
+/* changing  horizontal card layout into vertical on mobile for show_coctail.html page */
+@media(max-width: 768px){
+    .horizontal {  
+        flex-direction:column;
+        width: 100%;
+            }
+    .style-card{
+    margin-top:10px !important;
+    margin-bottom: 10px !important;
+}        
+    .card-img{   
+        object-fit: cover;
+        float: center;
+        width: 100%;
+        min-width: 190px;
+        height: auto;
+
+        display: block;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        margin-top: 25px;  
+    }
+}
+
+
+/* changing  horizontal card layout into vertical on iPad for show_coctail.html page*/
 @media(max-width: 1024px){
     .horizontal {  
         flex-direction:column;
@@ -233,26 +210,38 @@ main {
     }
 }
 
+/*............................................................flash-messages */
 
-@media(max-width: 768px){
-    .horizontal {  
-        flex-direction:column;
-        width: 100%;
-            }
-    .style-card{
-    margin-top:10px !important;
-    margin-bottom: 10px !important;
-}        
-    .card-img{   
-        object-fit: cover;
-        float: center;
-        width: 100%;
-        min-width: 190px;
-        height: auto;
+.flash-messages {
+	padding: 2% 2% 2% 2%;
+	color: #000000;
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: hsla(17, 83%, 56%, 0.25);
+}
 
-        display: block;
-        margin-left: 25px;
-        margin-bottom: 25px;
-        margin-top: 25px;  
-    }
+
+/*........................................................... Footer */
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	text-decoration: none;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.footer_link {
+	color: #EC6632;
+	text-decoration: none;
+}
+
+.footer_link:hover {
+	color: #CD4813;
+	text-decoration: none;
 }

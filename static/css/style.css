@@ -40,14 +40,14 @@ div.home-page-intro p {
 
 
 /* styling cocktail category names on all_coctail.html cards */
-span.all-coctail-name {
+span.coctail-name-style {
 	text-transform: uppercase;
 	font-family: "Poppins", sans-serif;
 	font-size: 1.3em;
 }
 
 
-/* making card images the same size on allcoctails.html and coctail_by_category.html */
+/* making card images the same size on all_coctails.html and coctail_by_category.html */
 img.image-size {
 	float: left;
 	width: 100px;
@@ -69,6 +69,16 @@ div.stars-card {
 	min-height: 80px;
 }
 
+/* View buttons */
+.view_button {
+  background-color:rgb(236,102,51) !important;
+  border: none;
+  border-radius: 5px !important;
+  margin: 0.5em 0.5em 0.5em 0.5em !important;
+  text-transform: uppercase !important;
+  font-family: "Poppins", sans-serif !important; 
+	
+}
 
 /*.................................................. show_coctail.html page styling */
 
@@ -87,7 +97,7 @@ div.style-card {
 .category-name {
 	text-transform: capitalize;
 	font-family: "Poppins", sans-serif;
-	font-size: 1.5em;
+	font-size: 1.8em;
 	color: #EC6632;
 }
 
@@ -96,14 +106,14 @@ div.style-card {
 .coctail-name {
 	text-transform: uppercase;
 	font-family: "Poppins", sans-serif;
-	font-size: 2em;
+	font-size: 2.2em;
 	font-style: italic;
 }
 
 
-/*..............................css styling  for edit, delete and cancel buttons */
+/*css styling  for edit, delete and cancel site buttons on show_coctail.html page */
 
-   /* Site Buttons */
+
 .delete_button {
   background-color: rgb(145, 24, 24)!important;
   border: none;
@@ -187,7 +197,7 @@ div.style-card {
 
 
 /* changing  horizontal card layout into vertical on iPad for show_coctail.html page*/
-@media(max-width: 1024px){
+@media(min-width: 1024px){
     .horizontal {  
         flex-direction:column;
         width: 100%;
@@ -208,6 +218,16 @@ div.style-card {
         margin-bottom: 25px;
         margin-top: 25px;  
     }
+}
+
+
+/*............................................................add_coctail.html */
+
+
+ 
+/* icon color styling */
+.icon-style{
+color: #EC6632;
 }
 
 /*............................................................flash-messages */
@@ -244,4 +264,23 @@ main {
 .footer_link:hover {
 	color: #CD4813;
 	text-decoration: none;
+}
+
+/*...........................................................Site Header styling */
+.h-style {
+  text-transform: capitalize;
+  font-size: 3em ;
+  margin-top: 1em;
+}
+
+/*stars.html Header styling */
+.h-style-stars{
+  font-size: 3em ;
+  margin-top: 1em;
+}
+
+/*site sub-header styling */
+.sub-style{
+font-size: 2em ;
+  margin-top: 1em;
 }

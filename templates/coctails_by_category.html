@@ -20,14 +20,14 @@
             <ul>
                <li class="view_cocktail_buttons">
                   <!--Cocktail name-->
-                  <span>
-                     <h5 class= "h-style">{{coctail.coctail_name}}</h5>
+                  <span class="coctail-name-style">
+                     {{coctail.coctail_name}}
                   </span>
                </li>
                <li>
                   <span>
                      <!--Button to view  cocktail recipe-->
-                     <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class="btn view_button">View Cocktail</a>
+                     <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class="btn view_button text-shadow">View Cocktail</a>
                   </span>
                </li>
             </ul>

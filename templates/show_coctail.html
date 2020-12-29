@@ -73,6 +73,30 @@
         width: 100%;
             }
     .style-card{
+    margin-top: 25% !important;
+    margin-bottom: 25% !important;
+}    
+    .card-image{   
+        object-fit: cover;
+        float: center;
+        width: 100%;
+        min-width: 190px;
+        height: auto;
+
+        display: block;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        margin-top: 25px;  
+    }
+}
+
+
+@media(max-width: 768px){
+    .horizontal {  
+        flex-direction:column;
+        width: 100%;
+            }
+    .style-card{
     margin-top:10px !important;
     margin-bottom: 10px !important;
 }        
@@ -122,11 +146,11 @@
                 <span> {{coctail.type}} </span>
               </li>
               <li>
-                <!-- primary alcohol-->
+                <!-- Primary alcohol-->
                 <span> {{coctail.primary_alcohol}} </span>
               </li>
               <li>
-                <!-- served-->
+                <!-- Served-->
                 <span> {{coctail.served}} </span>
               </li>
               <li>
@@ -135,23 +159,23 @@
               </li>
               <br/>
               <li>
-                <!-- ingredients-->
+                <!-- Ingredients-->
                 <span class="ingredients-color"> {{coctail.ingredients}} </span>
               </li>
               <br/>
               <li>
-                <!-- preparation-->
+                <!-- Preparation-->
                 <span> {{coctail.preparation}} </span>
               </li>
               <br />
               <li>
-                <!--notes-->
+                <!--Notes-->
                 <span class="notes-color"> {{coctail.notes}} </span>
               </li>
             </ul>
           </div>
 
-          <!-- Share/Edit/Delete Section-->
+          <!-- Cancel/Edit/Delete Section-->
           <div class="row card-action">
             <!-- Modal Trigger on Delete Button-->
             <div class="col s12">
@@ -163,6 +187,7 @@
               <form
                 action="{{url_for('edit_coctail', coctail_id=coctail._id)}}"
                 method="GET">
+                <!-- Edit Button-->
                 <button
                   type="submit"
                   name="action"
@@ -172,7 +197,7 @@
               </form>
             </div>
           </div>
-
+       <!-- Pop-up message with a delete/cancel button-->
           <div class="row">
             <div id="confirm" class="modal modal-width">
               <div class="modal-content">

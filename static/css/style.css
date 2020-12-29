@@ -59,17 +59,18 @@ img.image-size {
 }
 
 
-/* positioning card button on allcocktails.html  and coctails_by_category.html */
+/* Min height for the card text so the "view" button stays 
+on the same level for all the cards on all_coctails.html 
+and coctails_by_category.html page */
 
 .view_cocktail_buttons {
-	min-height: 40px;
+	min-height: 60px;
 }
 
 
-/* button to view cocktail on coctails_by_category.html */
-
-.view_cocktail_buttons_category {
-	min-height: 60px;
+/* Min height for the stars.html cards text */
+div.stars-card {
+	min-height: 80px;
 }
 
 
@@ -86,7 +87,7 @@ div.style-card {
 }
 
 
-/* styling coctktail category on showcoctail.html*/
+/* styling coctktail category name on showcoctail.html*/
 
 .category-name {
 	text-transform: capitalize;
@@ -142,3 +143,11 @@ main {
 	text-decoration: none;
 }
 
+
+
+
+
+/*..............................css styling  for edit, delete and cancel buttons */
+
+
+ 

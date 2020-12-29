@@ -1,40 +1,41 @@
-
-{% extends 'base.html' %} {% block content %}
-
+{% extends 'base.html' %}
+{% block content %}
 
 <!-- Title-->
 <div class="s12 m3 l3">
-    <h3 class="h-style center-align">All Cocktails</h3>
-<!-- Start of Cocktail Card-->
-<div class="row">
-<!--Calling on cocktail collection-->
-{% for coctail in coctails %} 
-    <!--Cocktail image-->
-    <div class="col l4 m6 s12">
-        <div class="card large">
+   <h3 class="h-style center-align">All Cocktails</h3>
+   <!-- Start of Cocktail Card-->
+   <div class="row">
+      <!--Calling on cocktail collection-->
+      {% for coctail in coctails %} 
+      <!--Cocktail image-->
+      <div class="col l4 m6 s12">
+         <div class="card large">
             <div class="card-image">
-                    <img class="image-size" src="{{coctail.image_link}}" alt="URL Image">
+               <img class="image-size" src="{{coctail.image_link}}" alt="URL Image">
             </div>
             <!--Cocktail info-->
             <div class="card-content center text">
-                <ul>
-                    <li class="view_cocktail_buttons_category"> 
-                        <!--Cocktail name-->
-                        <span class="all-coctail-name">
-                            {{coctail.coctail_name}} 
-                        </span>
-                    </li>
-                    <li>
-                    <span class="style">
-                    <!--Button to view  cocktail recipie-->
-                    <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class=" all-cocktails-width btn view_button">View Cocktail</a>
-                    </span>
-                    </li> 
-                </ul>
+               <ul>
+                  <li class="view_cocktail_buttons_category">
+                     <!--Cocktail name-->
+                     <span class="all-coctail-name">
+                     {{coctail.coctail_name}}
+                     </span>
+                  </li>
+                  <li>
+                     <span class="style">
+                        <!--Button to view  cocktail recipe-->
+                        <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}"
+                        class=" all-cocktails-width btn view_button">View Cocktail</a>
+                     </span>
+                  </li>
+               </ul>
             </div>
-        </div>
-    </div>
-{% endfor %}
+         </div>
+      </div>
+      {% endfor %}
+   </div>
 </div>
-</div>
+
 {% endblock %}

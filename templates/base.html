@@ -1,170 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="styleshet" href="path/to/font-awesome/css/font-awesome.min.css">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="styleshet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" /> 
-    <!--Favicon -->
-    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/favicon.png')}}"/>
+        <!--Link to local CSS file-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
+        <!--Favicon -->
+        <link rel="icon" type="image/png" href="{{url_for('static', filename='images/favicon.png')}}">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-<title>Cocktail Collections</title>
-</head>
+        <title>Cocktail Collections</title>
+    </head>
+    <body>
+        <header>
+            <!-- Top navbar -->
+            <nav class="nav-extended text-shadow blue-grey darken-4">
+                <div class="nav-wrapper">
+                    <a href="{{ url_for('home') }}" class="brand-logo-center text-color">Cocktail Collections</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                    <ul class="right hide-on-med-and-down text-color">
+                        <li><a href="{{url_for('home')}}" class="text-color">Home</a></li>
+                        <li><a href="{{url_for('get_coctail')}}" class="text-color">All Cocktails</a></li>
+                        <li><a href="{{url_for('add_coctail')}}" class="text-color">Add New Cocktail</a></li>
+                        <li><a href="{{url_for('stars')}}" class="text-color">Stars</a></li>
+                    </ul>
+                </div>
+            </nav>
 
-<body>
- <header>
-        <!-- top navbar -->
-		<nav class="nav-extended text-shadow blue-grey darken-4">
-			<div class="nav-wrapper">
-				<a href="{{ url_for('home') }}" class="brand-logo-center text-color ">Cocktail Collections</a>
-				<a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-				<ul class="right hide-on-med-and-down text-color">
-					<li><a  href="{{url_for('home')}}"class="text-color">Home</a></li>
-                    <li><a href="{{url_for('get_coctail')}}" class="text-color">All Cocktails</a></li>
-                    <li><a href="{{url_for('add_coctail')}}" class="text-color">Add New Cocktail</a></li>
-                    <li><a href="{{url_for('stars')}}" class="text-color">Stars</a></li>
-                    
-				</ul>
-			</div>
-		</nav>
+            <!-- Mobile sidenav -->
+            <ul class="sidenav text-color" id="mobile-demo">
+                <li><h4 class="text-color center-align white">Cocktail Collections</h4></li>
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('get_coctail')}}">All Cocktails</a></li>
+                <li><a href="{{url_for('add_coctail')}}">Add New Cocktail</a></li>
+                <li><a href="{{url_for('stars')}}">Stars</a></li>
+            </ul>
+        </header>
 
-        <!-- mobile sidenav -->
-		<ul class="sidenav text-color" id="mobile-demo">
-            <li><h4 class=" text-color center-align white">Cocktail Collections</h4></li>
-            <li><a href="{{url_for('home')}}">Home</a></li>
-            <li><a href="{{url_for('get_coctail')}}">All Cocktails</a></li>
-            <li><a href="{{url_for('add_coctail')}}">Add New Cocktail</a></li>
-            <li><a href="{{url_for('stars')}}">Stars</a></li>
-		</ul>
-	</header>
+        <section>
+                <!-- Flash messages -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div>
+                            <h5 id="flash-msg" class="flash-messages center-align">{{ message }}</h5>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </section>
 
-<section>
-        <!-- flash messages -->
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div>
-                        <h5 id="flash-msg" class="flash-messages center-align">{{ message }}</h5>
+        <!-- Content -->
+        <main>
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer class="page-footer blue-grey darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <br />
+                        <br />
+                        <spam class="center">
+                            <h5 class="white-text">Cocktail Collections</h5>
+                            <p>
+                                Bring you back to <br />
+                                the magical world of Great Gatzby, elegance,<br />
+                                smell of tobacco and cocktail parties
+                            </p>
+                            <p class="grey-text text-lighten-4"></p>
+                        </spam>
                     </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-</section>
-
-<!-- content -->
-<main>
-    <div class="container">
-        {% block content %}{% endblock %}
-    </div>
-</main>
-
-
-         <!-- footer -->   
-<footer class="page-footer blue-grey darken-4">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <br>
-                <br>
-                <spam class="center">
-                <h5 class="white-text">Cocktail Collections</h5>
-                <p>Bring you back to <br>
-                    the magical world of Great Gatzby, elegance,<br>
-                   smell of tobacco and cocktail parties</p>
-                <p class="grey-text text-lighten-4"></p>
-                </spam>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <ul>
-                <br>
-                <br>
-                <br>
-                <spam class="center">
-                <li><a class=" text-color fas fa-glass-martini-alt prefix" href="https://www.worlds50bestbars.com/list/1-50"> World's 50 Best Bars</a></li>  
-                <br>
-                <li><a class="text-color fas fa-glass-martini-alt prefix" href=" https://www.forbes.com/sites/forbestravelguide/2019/10/15/forbes-travel-guide-worlds-best-hotel-bars/?sh=7a9bad1e60b6"> Best Bars by Forbes</a></li> 
-                </spam>
-                <spam class="right">
-                
-                
-                </spam>
-
-                </ul>
-            </div>
-    </div>
-        </div>
-            <div class="footer-copyright center">
-                <div class="container"> © 2020 Cocktail Collections <a class="text-color" href="https://github.com/amorawskanew/MilestoneProject3-Anna" target="_blank">by Anna Morawska</a>
+                    <div class="col l4 offset-l2 s12">
+                        <ul>
+                            <br />
+                            <br />
+                            <br />
+                            <spam class="center">
+                                <li><a class="text-color fas fa-glass-martini-alt prefix" href="https://www.worlds50bestbars.com/list/1-50"> World's 50 Best Bars</a></li>
+                                <br />
+                                <li>
+                                    <a class="text-color fas fa-glass-martini-alt prefix" href=" https://www.forbes.com/sites/forbestravelguide/2019/10/15/forbes-travel-guide-worlds-best-hotel-bars/?sh=7a9bad1e60b6"> Best Bars by Forbes</a>
+                                </li>
+                            </spam>
+                            <spam class="right"> </spam>
+                        </ul>
+                    </div>
                 </div>
             </div>
-</footer>
-        
+            <div class="footer-copyright center">
+                <div class="container">© 2020 Cocktail Collections <a class="text-color" href="https://github.com/amorawskanew/MilestoneProject3-Anna" target="_blank">by Anna Morawska</a></div>
+            </div>
+        </footer>
 
 
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+        <script>
+            
+    // jQuery for Materialize CSS initialization for: 1.drop down menu,2.add new cocktail folder menu, 3.show_coctail.html button 
+            $(document).ready(function () {
+                $(".sidenav").sidenav({ edge: "right" });
+                $("select").formSelect();
+                $(".modal").modal();
+            });
+            
+    // Materialize CSS initialization for home page card deck image gallery
+            document.addEventListener("DOMContentLoaded", function () {
+                const gallery = document.querySelectorAll(".materialboxed");
+                M.Materialbox.init(gallery, {});
+            });
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    Materlialize Jquery Initialization
-    <script>
-        $(document).ready(function(){
-            $('.sidenav').sidenav();
-            $('select').formSelect();
-            $('.modal').modal();
-        });
-    </script>
-
-  
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-    <script >
-/*
-    jQuery for MaterializeCSS initialization for drop down menu
-*/
-$(document).ready(function () {
-    $(".sidenav").sidenav({edge: "right"});
-});
-/*
-    MaterializeCSS initialization for home page card deck image gallery
-*/
-document.addEventListener("DOMContentLoaded",function(){
-    const gallery= document.querySelectorAll(".materialboxed");
-    M.Materialbox.init(gallery,{});
-});
-
-
-
-  // Or with jQuery inicialization for add new cocktail folder
-
-  $(document).ready(function(){
-    $('select').formSelect();
-  });
-
-   // button inicialization 
-$(document).ready(function(){
-    $('.modal').modal();
-  });
- 
     // Fades out flash message after it has been read by user
-    $("#flash-msg").delay(4500).fadeOut("slow");
+            $("#flash-msg").delay(4500).fadeOut("slow");
 
-    </script>
-    
-<!--Local JavaScript files-->
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+        </script>
 
-    {% block scriprts %} 
-    {% endblock %}  
-</body>
+        {% block scriprts %} {% endblock %}
+    </body>
 </html>

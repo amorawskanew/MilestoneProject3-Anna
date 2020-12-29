@@ -1,50 +1,42 @@
 
-{% extends 'base.html'%} {% block content %}
-<!-- Title -->
+{% extends 'base.html'%}
+{% block content %}
 
-
+<!-- Cocktail category name -->
 <div class="col s12">
-  <h3 class="h-style center">{{category_name}}</h3>
+   <h3 class="h-style center">{{category_name}}</h3>
+</div>
+<!-- Start of cocktail card -->
+<div class="row">
+   {% for coctail in coctails %}
+   <!-- Cocktail image -->
+   <div class="col l4 m6 s12">
+      <div class="card large center">
+         <div class="card-image">
+            <img class="image-size" src="{{coctail.image_link}}" alt="URL Image">
+         </div>
+         <!--Cocktail card content-->
+         <div class="card-content">
+            <ul>
+               <li class="view_cocktail_buttons_category">
+                  <!--Cocktail name-->
+                  <span>
+                     <h5 class= "h-style">{{coctail.coctail_name}}</h5>
+                  </span>
+               </li>
+               <li>
+                  <span>
+                     <!--Button to view  cocktail recipe-->
+                     <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class="btn view_button">View Cocktail</a>
+                  </span>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   {% endfor %}
 </div>
 
-  <!-- Start of Coctail Card -->
- <div class="row">
- {% for coctail in coctails %}
-
-
-
-    <!-- coctail image -->
-    <div class="col l4 m6 s12">
-    
-        <div class="card large center">
-            <div class="card-image">
-                    <img class="image-size" src="{{coctail.image_link}}" alt="URL Image">
-            </div>
-            <!--Coctail content-->
-            <div class="card-content">
-                <ul>
-                    <li class="view_cocktail_buttons_category"> 
-                        <!--Coctail name-->
-                        <span>
-                           <h5 class= "h-style">{{coctail.coctail_name}}</h5>  
-                        </span>
-                    </li>
-                    <li> 
-                    <span>
-                    <!--Button to view  cocktail recipie-->
-                    <a href="{{url_for('show_coctail', coctail_id=coctail._id)}}" class="btn view_button">View Cocktail</a>
-                        </span>
-                    </li>        
-                </ul>
-            </div>
-         
-
-
-
-        </div>
-    </div>
-{% endfor %}
- </div>
 {% endblock %}
 
 

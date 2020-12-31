@@ -11,8 +11,6 @@ This application allows users to add cocktail recipes, edit, update, or delete t
 
  It is designed to be responsive and accessible on a range of devices, making it easy to navigate for potential users... cocktail lovers
 
-<h2 align="center"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
-
 ## USER EXPERIENCE (UX)
 
 -   ### USER STORIES
@@ -196,7 +194,7 @@ I checked:
 - An image for "Honey Special Cocktail" from my DB doesn't always download, but it can be removed or replaced with another one. I just like it so much that I decided to keep it anyway, at least for some time.
 - The word cocktail was misspelled at the beginning of my app development process and I didn't see it until my mentor pointed it out to me during our last project session. I did some corrections on the site where it is visible for the user, but I kept the misspelled version as variable name  spelled - coctail-  without "k"
 Excentric is also not the word I wanted to use (I meant Eccentric), but this word at least exists, so I didn't do any changes.
-
+- Footer- Div is not allowed as a child element of span. (https://validator.w3.org/nu/#textarea). I might keep this bug, but to be hornest it makes my footer look exactly the way I wanted.
 
 ## DEPLOYMENT
 

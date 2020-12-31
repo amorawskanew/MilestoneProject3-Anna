@@ -7,7 +7,7 @@
    <!-- Start of Cocktail Card-->
    <div class="row">
       <!--Calling on cocktail collection-->
-      {% for coctail in coctails %} 
+      {% for coctail in coctails %}
       <!--Cocktail image-->
       <div class="col l4 m6 s12">
          <div class="card large">
@@ -17,7 +17,7 @@
             <!--Cocktail info-->
             <div class="card-content center text">
                <ul>
-                  <li class="view_cocktail_buttons">
+                  <li class="card-coctail-name">
                      <!--Cocktail name-->
                      <span class="coctail-name-style">
                      {{coctail.coctail_name}}
@@ -39,3 +39,4 @@
 </div>
 
 {% endblock %}
+

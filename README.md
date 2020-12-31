@@ -1,6 +1,6 @@
 1.PROJECT'S NAME: Cocktail Collections
 
-This application allows users to add their favorite cocktail recipie, edit, update or delete it. 
+This application allows users to add their favorite cocktail recipe, edit, update or delete it. 
 It also has a section with top bartenders and links for best bars in the world.
 
 2.UX
@@ -106,21 +106,22 @@ Also, a big thank you to all the slack community and Code Institute tutors.
 Student, Anna Morawska
 =======
 
-Student, Anna Morawska
-
->>>>>>> 860a43e204fd91659033f44fe28b0d353288c69d
 
 
-
-///////////////////////////////////////.............................
+ 
 
 
 
-<h1 align="center">Code Institute Website</h1>
+<img src="/static/images/READme_image.png"/>
+<h1 align="center">Cocktail Collections Website</h1>
 
-[View the live project here.](https://codeinstitute.net)
+[View the live project here.](http://milestone-project3-anna.herokuapp.com/)
 
-This is the main marketing website for Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for potential students and partners.
+Cocktail Collections is an application where users can share their favourite cocktail recipes with others, thereby providing a useful source of information for those who like experimenting with new drink ideas.
+
+This application allows users to add cocktail recipe, edit, update or delete it. It also has a section with top bartenders and links to the best cocktail bars in the world, so users can learn tips from the industry leaders.
+
+ It is designed to be responvive and accessible on a range of devices, making it easy to navigate for potential users... cocktail lovers
 
 <h2 align="center"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
 
@@ -130,24 +131,24 @@ This is the main marketing website for Code Institute. It is designed to be resp
 
     -   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
+        1. First Time Visitors should be able to easily understand the main purpose of the site and get familiar with the structure of the web.
+        2. They should be able to easily navigate throughout the site to find content they are interested in.
+        3. The content of the website should be appealing enough so the first time users remember it and want to come back.
+
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to find information about coding challenges.
-        2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-        3. As a Returning Visitor, I want to find community links.
+        1. Returning Visitors should be able to go through the site and find the type of a dring recipe they are interested in and use it.
+        2. Returning Visitors should be able to find community links or cocktail related quality websites.
 
     -   #### Frequent User Goals
-        1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-        2. As a Frequent User, I want to check to see if there are any new blog posts.
-        3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-
+        1. Frequent Users should be able to share their cocktail recipes or modify the existing ones.
+        2. They should be able to develop better cocktail making skills and get inspiration to design their own unique recipes
+        
 -   ### Design
     -   #### Colour Scheme
-        -   The two main colours used are Code Insititue red, and white.
+        -   The two main colours used are orange and black, and a white background.
+        
     -   #### Typography
         -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
     -   #### Imagery

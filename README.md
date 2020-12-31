@@ -1,61 +1,3 @@
-1.PROJECT'S NAME: Cocktail Collections
-
-This application allows users to add their favorite cocktail recipe, edit, update or delete it. 
-It also has a section with top bartenders and links for best bars in the world.
-
-2.UX
-The purpose of this app is to  provide platform for cocktail lovers, so they cvan share 
-their favorite cocktail recipies as well as to provide some interesting information on bars and bartenders. 
-
-3.DATABASE
-Thge datata base of cocktail recipies was built based on IBA ( International Bartenders Association) and is stored in Mongo DB in a form of twwo collections: "categories" and "coctails" 
-
-4.FEATURES
-
-A. HOME PAGE
-B. ALL COCKTAILS
-C. ADD NEW COCKTAIL
-D. STARS
-
-Home page is my landing page where I briefly explain the purpose of the app and show different cocktail categories. 
-They are as follow:
-    *Classics
-    *New era drinks
-    *Specials
-    *Beer cocktails
-    *Wine cocktails
-    *Liquor coctails
-    *Flaming drinks
-    *Non-alcoholic drinks
-    *Excentric
-
-When you click on one of the cocktail categories ON HOME PAGE, you get displayed a collection of cocktails that belong to that category. Here you can choose your favorite cocktail and go to this cocktail recipie page by clicking on the button "VIEW COCKTAIL"
-You can also access a cocktail of your choice via ALL COCKTAILS, where all the cocktails are displayed.
-I have also added a page STARS where you can get familliar with some of the top cocktail creaters in the industry. 
-
-4.USED TECHNOLOGIES:
-
-HTML - used for building the framework of the project.
-CSS- used for styling some components of the app.
-PYTHON-languageto was used to create the functions that render the cocktail categories or cocktails  
-FLASK- framework was used to route python functions and link to the html pages.
-MATERIALIZE CSS- the main framework used to build the responsive front-end design of the website.
-JQuery was used to initialise the Materialize CSS framework.
-Google Fonts used as main fonts on website.
-MongoDB Atlas is the database used to store cocktail collections.
-GitPodto- used to write my code
-GitHub used as a repository of the app.
-Heroku- used for the deployment of the app
-
-5.TESTING- I tested every component of my app as I was building it: Navigation bar, Footer, CRUD functionalities,checking if all the elements work properly. I tested every page on different devices: iphone, ipad, desktop .
-Also, I checked its functional aspect by asking firiends to add a recipie and observed how long it takes to load the pagre.
-<<<<<<< HEAD
-
-*Testing Tools
-"inspect" from  Development Tools.
-Validator check the code ( HTML, CSS) 
-=======
->>>>>>> 860a43e204fd91659033f44fe28b0d353288c69d
 
 *Testing Tools
 "inspect" from  Development Tools.
@@ -117,6 +59,8 @@ Student, Anna Morawska
 
 [View the live project here.](http://milestone-project3-anna.herokuapp.com/)
 
+APPLICATON'S PURPOSE
+
 Cocktail Collections is an application where users can share their favourite cocktail recipes with others, thereby providing a useful source of information for those who like experimenting with new drink ideas.
 
 This application allows users to add cocktail recipe, edit, update or delete it. It also has a section with top bartenders and links to the best cocktail bars in the world, so users can learn tips from the industry leaders.
@@ -127,7 +71,7 @@ This application allows users to add cocktail recipe, edit, update or delete it.
 
 ## User Experience (UX)
 
--   ### User stories
+-   ### USER STORIES
 
     -   #### First Time Visitor Goals
 
@@ -136,7 +80,7 @@ This application allows users to add cocktail recipe, edit, update or delete it.
         3. The content of the website should be appealing enough so the first time users remember it and want to come back.
 
 
-    -   #### Returning Visitor Goals
+    -   #### RETURNING VISITORS GOALS
 
         1. Returning Visitors should be able to go through the site and find the type of a dring recipe they are interested in and use it.
         2. Returning Visitors should be able to find community links or cocktail related quality websites.
@@ -145,24 +89,63 @@ This application allows users to add cocktail recipe, edit, update or delete it.
         1. Frequent Users should be able to share their cocktail recipes or modify the existing ones.
         2. They should be able to develop better cocktail making skills and get inspiration to design their own unique recipes
         
--   ### Design
+-   ### DESIGN
     -   #### Colour Scheme
         -   The two main colours used are orange and black, and a white background.
-        
-    -   #### Typography
-        -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
-    -   #### Imagery
-        -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
 
-*   ### Wireframes
+    -   #### IMAGES
+        -   The images for the landing and the stars pages were downloaded from internet and are stored locally in a folder "images". The rest of ithe mages are downloaded via url links, which are part of MongoDB. 
+        Images were chosen for their vibrant colors and modern aestetics. The website's colors are designed to catch user's attention and stimulate his brain.
 
-    -   Home Page Wireframe - [View](https://github.com/)
+*   ### DESIGN PROCESS
 
-    -   Mobile Wireframe - [View](https://github.com/)
+ I started my design process from doing online research on cocktail websies and applications. I checked mainly top recommendations. Most of them were very complex and required some time to learn how to navigate them. I wanted to create something that would be very simple and easy to use, but at the same time informative and useful for potencial visitors.
+I sketched the layouts of the main pages and planned how a user would go from one page to another. I wanted to create an app that users could use a bit like an open notebook where other can access and share their recipes.
 
-    -   Contact Us Page Wireframe - [View](https://github.com/)
+I discovered Frigma only when my app was almost finished, so I couldn't really benefit from this tool, but it looks like it can be a big help in planning and designimg process. I will try to use it it next time.
 
-## Features
+*   ### DATABASE
+Thge datata base of cocktail recipies was built based on IBA ( International Bartenders Association) and is stored in Mongo DB in a form of twwo collections: "categories" and "coctails" 
+
+
+## FEATURES
+
+* EXISTING FEATURES
+
+1. HOME PAGE
+2. COCTAIL CATEGORY PAGE
+3. INDIVIDUAL COCKTAIL PAGE
+4. STARS
+5. ALL COCKTAILS
+6. ADD NEW COCKTAIL
+
+
+HOME PAGE is my landing page where I briefly explain the purpose of the app and display  nine different cocktail categories. Each category has a pulsing cocktail icone, which when clicked on reveals a small piece of information on a given category. Beneath the category image, there is a category name and a clickable link "Click Me", that takes a user to the chosen category page. 
+
+* The cocktail categories are as follow:
+    *Classics
+    *New era drinks
+    *Specials
+    *Beer cocktails
+    *Wine cocktails
+    *Liquor coctails
+    *Flaming drinks
+    *Non-alcoholic drinks
+    *Excentric
+
+When you click on one of the cocktail categories ON HOME PAGE, you get displayed a collection of cocktails that belong to that category. 
+
+COCTAIL CATEGORY PAGE- here you can choose your favorite cocktail and go to the  COCKTAIL INDIVIDUAL PAGE by clicking on the button "VIEW COCKTAIL"
+You can also access a cocktail of your choice via ALL E. COCKTAILS page, where all the cocktails are displayed.
+I have also added a page STARS where you can get familliar with some of the top cocktail creaters in the industry. 
+
+* FEATURES LEFT TO IMPLEMENT
+
+1. Chat window or page where users can communicate and exchange ideas on new drinks.
+2. links to social media 
+2. Signin\Login\Register form
+
+
 
 -   Responsive on all device sizes
 
@@ -170,178 +153,168 @@ This application allows users to add cocktail recipe, edit, update or delete it.
 
 ## Technologies Used
 
-### Languages Used
+### Languages 
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Python](https://en.wikipedia.org/wiki/Python)
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-    - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
-1. [Font Awesome:](https://fontawesome.com/)
+1. [Frigma](https://www.figma.com/files/recent)
+    - In the begining I used Figma to help me design the wireframes for diffrent screen sizes, but I didn't have enough time to get familiar with this software and at the end I switched to paper and pencil. Yet, I found it a great tool, definitely worth exploring and I might use in my future projects.
+2. [Color convertor](https://convertacolor.com/)
+    - Color convertor was used to covert colors to hlsa sysstem taht allows to change opacity of the color. I used it to make the orange color of the flash messages slightly transparent so they create more pleasant experience for the user.
+3. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used to import fonts such as Poppins, Anton, Sans Work, which were used to style text on all pages throughout the project.
+4. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
-1. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
-1. [Git](https://git-scm.com/)
+5. [jQuery:](https://jquery.com/)
+    - jQuery was mainly used to initialise the Materialize CSS framework.
+6. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-1. [GitHub:](https://github.com/)
+7. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to create the logo, resizing images and editing photos for the website.
-1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+8. [Google Photos:](https://www.google.com/photos/about/)
+    - Google Photos was used to resize and edit the image for READEME.md, HOME and STARS pages of Cocktail Collections app.
+9. [Heroku:](https://devcenter.heroku.com/categories/reference)
+    -Heroku was used as a hosting platform to deploy the live version of my app.
+10. [Materialize:](https://materializecss.com//)
+    - Materialze was used to create and style the project's navbar, footer, cards. add and edit cocktail forms. 
+11. [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+    - The Python microframework used to help write the Python code for this project. 
+12.    [MongoDB:](https://www.mongodb.com/2)
+    - Was used to store data in the cloud.
+13.   [PyMongo:](https://pymongo.readthedocs.io/en/stable/)
+    - PyMongo was used as the Python API for MongoDB. This API enabled me to link the data from the back-end database to the front-end app. 
 
-## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+## TESTING
 
-### Testing User Stories from User Experience (UX) Section
+I tested every component of my app as I was building it: Navigation bar, Footer, CRUD functionalities,checking if all the elements work properly. I tested every page on different devices: iphone, ipad, desktop.
+Also, I checked its functional aspect by asking firiends to add a recipie and observed how long it takes to load the pagre.
 
--   #### First Time Visitor Goals
 
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
+### TESTING TOOLS
 
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Learn More" Call to action button.
-        2. The main points are made immediately with the hero image
-        3. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
+The following testing tools were used to minimaze the APP of errors:
 
-    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
+- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- [pyTest](https://docs.pytest.org/en/stable/getting-started.html)
+- [PEP8](http://pep8online.com/checkresult)
+- [HTML Formatter](https://www.freeformatter.com/html-formatter.html)
+- [Language Tool](https://languagetool.org/?l=en&utm_source=google&utm_medium=cpc&utm_campaign=spell_checker&utm_term=online%20spell%20check&)
+- [CSS Beautyfier](https://www.freeformatter.com/css-beautifier.html)
 
-        1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
-        2. At the bottom of the first 3 pages there is a redirection call to action to ensure the user always has somewhere to go and doesn't feel trapped as they get to the bottom of the page.
-        3. On the Contact Us Page, after a form response is submitted, the page refreshes and the user is brought to the top of the page where the navigation bar is.
 
-    3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are.
-        1. Once the new visitor has read the About Us and What We Do text, they will notice the Why We are Loved So Much section.
-        2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
-        3. At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
+### TESTING USER STORIES
 
--   #### Returning Visitor Goals
+#### First Time Visitor Experience
 
-    1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
+* to learn more about the content of the app and be able to smoothly navigate throughout all the pages. I noticed that navigation is not entirely smooth. A return button is missing on Individual cocktail page so the user can go back to category page.
 
-        1. These are clearly shown in the banner message.
-        2. They will be directed to a page with another hero image and call to action.
+#### Returning Visitor Experience
 
-    2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
+* As a Returning Visitor, I want to find the new cocktail recipes and be able to share them. I can easily acces the recipes, but share tosocial media buttons are missing.
 
-        1. The navigation bar clearly highlights the "Contact Us" Page.
-        2. Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-        3. The footer contains links to the organisations Facebook, Twitter and Instagram page as well as the organization's email.
-        4. Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-        5. The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
+#### Frequent User Experience
 
-    3. As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
-        1. The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-        2. Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
-        3. If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
+* As a Frequent User, I want to  to see if the app is popular and if there is any activities that can add value to me or to Cocktail creators community. The site doesn't have any connection to other user and this aspect still needs to be developped
 
--   #### Frequent User Goals
+### Compatibility tests
 
-    1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
+I tested my app on the following browsers to see if everything worked as planned:
 
-        1. The user would already be comfortable with the website layout and can easily click the banner message.
+* Apple Safari
+* Google Chrome (main testing browser)
 
-    2. As a Frequent User, I want to check to see if there are any new blog posts.
+### Using different devices
 
-        1. The user would already be comfortable with the website layout and can easily click the blog link
+* The project has been tested using Chrome dev tool on 20 different devices such as as Desktop, Laptop, iPhone, kinddle, iPad, etc.
 
-    3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-        1. At the bottom of every page their is a footer which content is consistent throughout all pages.
-        2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
-        3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
+### MANUAL TESTS
 
-### Further Testing
+I  A large amount of testing was done to ensure that all pages were linking correctly and that all the components of the app operate as intended.
 
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
--   A large amount of testing was done to ensure that all pages were linking correctly.
--   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+I checked: 
 
-### Known Bugs
+* Menu bar
+* Footer
+* Home
+* Add cocktail
+* Edit cocktail
+* Delete cocktail
+* All cocktails
+* Category cocktail page
+* Stars
 
--   On some mobile devices the Hero Image pushes the size of screen out more than any of the other content on the page.
-    -   A white gap can be seen to the right of the footer and navigation bar as a result.
--   On Microsoft Edge and Internet Explorer Browsers, all links in Navbar are pushed upwards when hovering over them.
 
-## Deployment
+### KNOWN BUGS
 
-### GitHub Pages
+-   On iPhone 5/SE the delete button is slightly squeezed from the right side. It can be probably easily fixed, just requires some extra time and internet googling.
+-Footer links are not perfectly aligned. I tried to modify it with CSS flexbox, grid and Absolute\Relative positioning, but again lack of experience and time constrain made didn't let me achieve the results that would fully satisfy me.
+- An image for "Honey Special Cocktail" from my DB doesn't always download, but it can be removed or replaced with another one. I just like it so much that I decided to keep it anyway, at least for some time.
+- The word cocktail was misspelled at the beginning of my app development process and I didn't noticed it to the very last moment when my mentor pointed it out to me during our last project session. I did some corrections on the site where it is visible for the user, but kept the msspelled version as variable name  spelled without "k" -coctail.
+Excentric is also not the word I wanted to use (I meant Eccentric), but this word is at least spelled correctly, so I didn't do any changes.
 
-The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+## DPLOYMENT
 
-### Forking the GitHub Repository
+Deployment
+My project was first developed using Gitpod as the chosen IDE and GitHub as a remote repository.
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+The deployed project link: https://milestone-project3-anna.herokuapp.com/
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+The project's GitHub repository link: https://github.com/amorawskanew/MilestoneProject3-Anna
 
-### Making a Local Clone
+## DEPLOYMENT TO HEROKU - STEPS
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
+    * First, I created my project on Gitpod (
+    * Project files and folders
+    * requirements.txt file using "pip3 freeze --local > requirements.txt" command
+    * Procfile file that starts with capital using "echo web: python3 app.py > Procfile" command
+    * I cmmited both filles to GitHub
+    * Next, I signed in to Heroku and created a new application
+    * I set the region to Europe (which is the closest to Holland)
+    * I went to Reveal Config Variables and input all the required values such as:
+    MONGO_URI, IP, SECRET_KEY,PORT 
+    Note: I put the wrong password in my MONGO_URI, which resulted in authentification bug.
+    * I logged into Heroku from my Gitpod terminal and then pushed all my commits to Heroku via $ git push heroku master.
+    * This completed the process of deploying my project to Heroku. 
+    * Once deployed, I continued to push all changes made to "Cocktail Collections" to Heroku throughout the whole development process.
 
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
+## CREDITS
 
-7. Press Enter. Your local clone will be created.
+### USED MATERIALS
 
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
+-   [Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME): For lettig me use the README document as a template and reference document for my own READEME, as well as creating very informative tutorial videos that vere the basis for my project.
+-    [StackOverflow post](https://stackoverflow.com) for providing cards styling ideas that I used for my for my Home page.
+-   [Oston Code Cypher](https://www.youtube.com/watch?v=7yLcgKxBRVg&t=1082s) : For making available video on How to create Simple & Responsive Cards using Materialize CSS
 
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+And many others
 
-## Credits
+* Materialize website
+* Google icons
+* StuckOverflow website
+* Various online tutorials and documentation on python
+* W3 Shools.com page for CSS styling
+* Ideas from Tutor online support 
 
-### Code
+I read and used a lot of materials throughout the application development process. I have documented only some of them as I didn't have time to keep track of all of them.
 
--   The full-screen hero image code came from this [StackOverflow post](https://stackoverflow.com)
+### CONTENT
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+-   Content of this project is a result of the collaboration between  my mentors, Slack Community, Tutors and on line materials.
 
--   [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
+### MEDIA
 
-### Content
+-   The images used in this project were obtained from multiple blogs/articles/recipe,  bartending and mixology websites.
 
--   All content was written by the developer.
 
--   Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+### Acknowledgements ACKNOWLEDGEMENTS
 
-### Media
+-   A big thank you to my mentor Anna Villanueva and Owonikoko Oluwaseun for their support througout the project and continuous feedback that helped me to improve my app.
 
--   All Images were created by the developer.
-
-### Acknowledgements
-
--   My Mentor for continuous helpful feedback.
-
--   Tutor support at Code Institute for their support.
+-   Thank you to all the wonderful Code Institute Tutors for their patience and help with debuging my app. 

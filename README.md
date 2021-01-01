@@ -249,6 +249,6 @@ I read and used a lot of materials throughout the application development proces
 
 ### ACKNOWLEDGEMENTS
 
--   A big thank you to my mentor Anna Villanueva and Owonikoko Oluwaseun for their support throughout the project and continuous feedback that helped me to improve my app.
+-   A big thank you to my mentor Anna Villanueva and Owonikoko Oluwaseun for their support throughout the project and continuous feedback that helped me to improve my app. My mentors helped me to conceptualized the project by suggesting how to organize it and provided me with various examples of similar apps. One of the greatest tools I discovered thanks to my mentors was PEP8, the W3C Validation Service and other testing tools that helped me to become more independent in debugging my code.
 
 -   Thank you to all the wonderful Code Institute Tutors for their patience and help with debugging my app. 
